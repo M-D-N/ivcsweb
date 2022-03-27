@@ -1,0 +1,17 @@
+@import url('./fonts.css');
+
+:root{
+    /* fonts */
+    --rl:"Raleway-Light";
+    --rm:"Raleway-Medium";
+    --rr:"Raleway-Regular";
+    --rb:"Raleway-Bold";
+    --rblack:"Raleway-Black";
+
+    /* colors */
+    --yellow:#F4C42B;
+    --white: #fff;
+    --black: rgb(0, 0, 0);
+    --txtblack: #141414;
+    --navColor: rgba(255, 255, 255, 0.3);
+}

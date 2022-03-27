@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVCS - Web Studio | О нас</title>
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/active-icons.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <style>
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Bold.ttf') format('truetype');
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Black.ttf') format('truetype');
+            font-weight: 900;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'raleway';
+        }
+
+        .wrapper {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1650px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        /* container media */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 376px;
+            }
+        }
+
+        /* about section */
+        .about {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .about__content {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        .about__content::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .subtitle {
+            font-weight: 700;
+            font-size: 72px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .subtitle span {
+            color: #F4C42B;
+        }
+
+        .about__inner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about__inner-img {
+            width: 100%;
+            max-width: 576px;
+            object-fit: contain;
+        }
+
+        .about-desk-img {
+            display: block;
+        }
+
+        .about-mobile-img {
+            display: none;
+        }
+
+        .about__inner-hero {
+            width: 100%;
+            max-width: 568px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+
+        .about__inner-hero-ivcs {
+            margin-bottom: 20px;
+            font-weight: 900;
+            font-size: 36px;
+        }
+
+        .about__inner-hero-text {
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        .about__inner-hero-text span {
+            font-weight: 700;
+        }
+
+        .about__inner-hero-text-best {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .subtitle-small {
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+            margin: 200px 0;
+        }
+
+        .subtitle-small span {
+            color: #F4C42B;
+        }
+
+        .about__inner-hero-title {
+            font-weight: 700;
+            font-size: 48px;
+        }
+
+        .about__inner-hero-title span {
+            color: #F4C42B;
+        }
+
+        .about__inner-hero-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            padding-left: 20px;
+        }
+
+        .about__inner-hero-list li {
+            list-style: disc;
+        }
+
+        .about__inner-hero-list li span {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .section-1__img {
+            max-width: 576px;
+        }
+
+        .section-1__hero {
+            max-width: 775px;
+        }
+
+        .section-2__img {
+            max-width: 438px;
+        }
+
+        .section-2__hero {
+            max-width: 711px;
+        }
+
+        .about__inner-3 {
+            margin-top: 140px;
+        }
+
+        .about__inner-4 {
+            margin-top: 140px;
+        }
+
+        .section-4__hero {
+            max-width: 720px;
+        }
+
+        .section-4__img {
+            max-width: 356px;
+        }
+
+        .about__btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 70px;
+        }
+
+        .about__btn a {
+            background-color: #F4C42B;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 250px;
+            color: black;
+            font-size: 18px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .about__btn a:hover {
+            box-shadow: 0px 4px 15px rgba(167, 135, 33, 0.35);
+        }
+
+        /* media */
+
+        @media (max-width: 1500px) {
+            .subtitle {
+                font-size: 48px;
+            }
+
+            .subtitle-small {
+                font-size: 32px;
+                margin: 80px 0;
+            }
+
+            .about__inner-hero-ivcs {
+                font-size: 24px;
+                margin-bottom: unset;
+            }
+
+            .about__inner-hero-text-best {
+                font-size: 17px;
+            }
+
+            .about__inner-hero-text {
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 1450px) {
+            .subtitle {
+                margin-bottom: unset;
+            }
+            
+            .about__inner-hero-title {
+                font-size: 28px;
+                text-align: center;
+            }
+            
+            .about__inner-hero-list li span {
+                font-size: 18px;
+            }
+
+            .about__inner-hero-list {
+                max-width: 348px;
+            }
+
+            .about__inner {
+                flex-direction: column;
+                gap: unset;
+            }
+
+            .about__inner-3 {
+                margin-top: 70px;
+            }
+            
+            .about__inner-4 {
+                margin-top: 70px;
+            }
+
+            .about__inner-5 {
+                margin-top: 70px;
+            }
+
+            .about__inner-hero {
+                align-items: center;
+            }
+
+            .about__inner-hero-text {
+                text-align: center;
+                line-height: 25px;
+            }
+
+            .about__inner-img {
+                width: 100%;
+                max-width: 348px;
+                height: 348px;
+            }
+
+            .about__inner-hero-text-best {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 1152px) {
+            .about__content {
+                height: unset;
+                overflow-y: visible;
+                padding-top: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .subtitle {
+                margin-bottom: 50px;
+            }
+
+            .about__inner-hero {
+                row-gap: 0;
+            }
+
+            .about__inner-hero-text-best {
+                display: none;
+            }
+
+            .about__inner-hero-ivcs {
+                display: none;
+            }
+
+            .about-desk-img {
+                display: none;
+            }
+
+            .about-mobile-img {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="pagePreloader" class="preloader">
+        <div class="loader"></div>
+        <img class="preloader-img" src="./images/preloader.png" alt="">
+    </div>
+    <div class="wrapper">
+        <div class="navbar__modal">
+            <div class="navbar__modal-bg"></div>
+            <div class="navbar__modal-inner">
+                <p>Введите то что вас <span>интересует</span></p>
+                <div>
+                    <input type="text" placeholder="Сайт визитка...">
+                    <button><img src="images/navbar-search.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__mobile">
+            <div class="container">
+                <div class="navbar__mobile-nav">
+                    <a href="#!" class="navbar__mobile-logo"><img src="images/navbar-mobile.svg" alt=""></a>
+                    <div class="navbar__mobile-inner">
+                        <div class="navbar__search">
+                            <button type="button" class="navbar__mobile-search-icon">
+                                <img src="images/navbar-search.svg" alt="">                     
+                            </button>
+                        </div>
+                        <div class="burger__body">
+                            <div class="burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="burger__list">
+                                <a href="#!" class="burger__logo"><img src="images/burger__logo.png" alt=""></a>
+                                <select name="" id="" class="navbar__select navbar__select-mobile">
+                                    <option value="0">Русский</option>
+                                    <option value="1">Узбекский</option>
+                                    <option value="2">Английский</option>
+                                </select>
+                                <a href="./indexMain.html" class="burger__link">Главная</a>
+                                <a href="./services.html" class="burger__link">Услуги</a>
+                                <a href="./works.html" class="burger__link">Портфолио</a>
+                                <a href="./about.html" class="burger__link">О нас</a>
+                                <a href="./contacts.html" class="burger__link">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="about">
+            <nav class="navbar">
+                <div class="navbar__search">
+                    <button type="button" class="navbar__search-icon">
+                        <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
+                        </svg>                        
+                    </button>
+                </div>
+                <div class="navbar__menu">
+                    <button type="button" class="navbar__menu-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3984 11.9996L15.9984 5.59961M22.3984 11.9996L15.9984 18.3996M22.3984 11.9996H2.39844" stroke="white"/>
+                        </svg>
+                    </button>
+                    <div class="navbar__menu-def">
+                        <div class="navbar__menu-def-language">
+                            <select name="" id="">
+                                <option value="0">Ru</option>
+                                <option value="1">Uz</option>
+                                <option value="2">En</option>
+                            </select>
+                        </div>
+                        <ul class="navbar__menu-def-list">
+                            <li>
+                                <a href="./indexMain.html">
+                                    <img src="images/navbar-icon-1.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./services.html">
+                                    <img src="images/navbar-icon-2.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./works.html">
+                                    <img src="images/navbar-icon-3.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./about.html">
+                                    <img src="images/navbar-4-active.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./contacts.html">
+                                    <img src="images/navbar-icon-5.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar__menu-full">
+                        <div class="navbar__menu-full-hero">
+                            <a href="#!" class="navbar__logo"><img src="images/navbar-logo.svg" alt=""></a>
+                            <select name="" id="" class="navbar__select">
+                                <option value="0">Русский</option>
+                                <option value="1">Узбекский</option>
+                                <option value="2">Английский</option>
+                            </select>
+                        </div>
+                        <div class="navbar__menu-full-inner">
+                            <ul class="navbar__menu-full-list">
+                                <li>
+                                    <a href="./indexMain.html">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="./services.html">Услуги</a>
+                                </li>
+                                <li>
+                                    <a href="./works.html">Портфолио</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html" class="active-icon">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="./contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                            <div class="navbar__menu-full-social">
+                                <a href="#!"><img src="images/navbar-inst.png" alt=""></a>
+                                <a href="#!"><img src="images/navbar-facebook.png" alt=""></a>
+                                <a href="#!"><img src="images/navbar-youtube.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="about__content">
+                    <h2 class="subtitle">Кто <span>мы</span> такие?</h2>
+                    <div class="about__inner">
+                        <img src="images/72259-team.gif" alt="" class="about__inner-img about-desk-img section-1__img">
+                        <div class="about__inner-hero section-1__hero">
+                            <span class="about__inner-hero-ivcs">IVCS</span>
+                            <p class="about__inner-hero-text">
+                                <span>IVCS</span> - ЭТО МОЛОДАЯ И УСПЕШНАЯ ВЕБ-СТУДИЯ , КОТОРАЯ СОСТОИТ ИЗ УСПЕШНЫХ И ТВОРЧЕСКИХ ЛЮДЕЙ . НАША СТУДИЯ ТОЛЬКО ДЕЛАЕТ СВОИ ПЕРВЫЕ ШАГИ ПО ОКАЗАНИЮ УСЛУГ , НО ЭТО НЕ КАСАЕТСЯ НАШИХ СОТРУДНИКОВ . У НАС СОТРУДНИКИ УСПЕЛИ ПОРАБОТАТЬ КАК И В УЗБЕКИСТАНЕ , ТАК И ПО ВСЕМУ МИРУ .
+                            </p>
+                            <img src="images/72259-team.gif" alt="" class="about__inner-img about-mobile-img">
+                            <p class="about__inner-hero-text">
+                                ОТ НАС КЛИЕНТЫ УХОДИЛИ ТОЛЬКО СЧАСТЛИВЫЕ , ВЕДЬ МЫ ЗАБОТИМСЯ НЕ ТОЛЬКО О ДИЗАЙНЕ И ТЕХНИЧЕСКИХ ВОПРОСАХ ПРОДУКТОВ . МЫ ВКЛАДЫВАЕМ ЧАСТИЧКУ СЕБЯ ПРИ СОЗДАНИИ ЛЮБОГО ПРОДУКТА . 
+                            </p>
+                            <p class="about__inner-hero-text-best">
+                                ЭТО И ОТЛИЧАЕТ НАС ОТ ВСЕХ ВЕБ-СТУДИЙ.
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="subtitle-small">ДАВАЙТЕ МЫ ВАМ РАССКАЖЕМ <span>КАК СОЗДАЮТСЯ САЙТЫ</span> У НАС</h3>
+                    <div class="about__inner">
+                        <div class="about__inner-hero section-2__hero">
+                            <h3 class="about__inner-hero-title"><span>Этапы</span> разработки сайта</h3>
+                            <img src="images/84896-loader-25d-bear.gif" alt="" class="about__inner-img about-mobile-img">
+                            <ul class="about__inner-hero-list">
+                                <li>
+                                    <span>Подготавливается структура сайта</span>
+                                </li>
+                                <li>
+                                    <span>Составляется техническое задание (ТЗ)</span>
+                                </li>
+                                <li>
+                                    <span>Разрабатывается дизайн сайта</span>
+                                </li>
+                                <li>
+                                    <span>Выполняются работы по программированию</span>
+                                </li>
+                                <li>
+                                    <span>Данные размещаются на сайте</span>
+                                </li>
+                                <li>
+                                    <span>Сайт размещается в интернете</span>
+                                </li>
+                                <li>
+                                    <span>Проводятся испытания</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="images/84896-loader-25d-bear.gif" alt="" class="about__inner-img about-desk-img section-2__img">
+                    </div>
+                    <div class="about__inner about__inner-3">
+                        <img src="images/69919-code-review.gif" alt="" class="about__inner-img about-desk-img section-3__img">
+                        <div class="about__inner-hero section-3__hero">
+                            <h3 class="about__inner-hero-title"><span>Подготавливается</span> структура сайта</h3>
+                            <img src="images/69919-code-review.gif" alt="" class="about__inner-img about-mobile-img">
+                            <p class="about__inner-hero-text">
+                                Структура сайта – один из важнейших этапов при создании, так как у пользователя не должно возникнуть проблем с просмотром и использованием сайта. Google это все также учитывает.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__inner  about__inner-4">
+                        <div class="about__inner-hero section-4__hero">
+                            <h3 class="about__inner-hero-title"><span>Составляется</span> техническое задание (ТЗ)</h3>
+                            <img src="images/4922-search-files.gif" alt="" class="about__inner-img about-mobile-img">
+                            <p class="about__inner-hero-text">
+                                В ТЗ описывается все, вплоть до расположения и цвета кнопок. Это даст обеим сторонам четкое представление о том, каким будет результат.
+                            </p>
+                            <p class="about__inner-hero-text">
+                                Техническое задание составляется нами и подписывается обеими сторонами.
+                            </p>
+                        </div>
+                        <img src="images/4922-search-files.gif" alt="" class="about__inner-img about-desk-img section-4__img">
+                    </div>
+                    <div class="about__inner about__inner-3">
+                        <img src="images/36069-graphic-design.gif" alt="" class="about__inner-img about-desk-img section-3__img">
+                        <div class="about__inner-hero section-4__hero">
+                            <h3 class="about__inner-hero-title">Разрабатывается <span>дизайн сайта</span></h3>
+                            <img src="images/36069-graphic-design.gif" alt="" class="about__inner-img about-mobile-img">
+                            <p class="about__inner-hero-text">
+                                Перед созданием веб-сайта наш дизайнер изучает оформления самых передовых сайтов в данной области. Затем создает дизайн, способный смело с ними конкурировать.
+                            </p>
+                            <p class="about__inner-hero-text">
+                                В дизайне учитывается приятный цветовой спектр, подобранный при создании логотипа и под ваши товары. Одним словом, дизайн, за который точно не будет стыдно.
+                            </p>
+                            <p class="about__inner-hero-text">
+                                Как только дизайн будет готов для разработки сайта, он подписывается двумя сторонами.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__inner  about__inner-5">
+                        <div class="about__inner-hero section-4__hero">
+                            <h3 class="about__inner-hero-title">Выполняются работы по <span>программированию</span></h3>
+                            <img src="images/75061-dashboard.gif" alt="" class="about__inner-img about-mobile-img">
+                            <p class="about__inner-hero-text">
+                                На этом этапе самые опытные программисты нашей страны приступят к созданию вашего сайта. Дизайн, спецификации, структура сайта подготавливаются заранее, чтобы обеспечить корректное выполнение программирования.
+                            </p>
+                        </div>
+                        <img src="images/75061-dashboard.gif" alt="" class="about__inner-img about-desk-img section-3__img">
+                    </div>
+                    <div class="about__inner about__inner-5">
+                        <img src="images/69298-web-designer.gif" alt="" class="about__inner-img about-desk-img section-3__img">
+                        <div class="about__inner-hero section-4__hero">
+                            <h3 class="about__inner-hero-title">Данные <span>размещаются</span> на сайте</h3>
+                            <img src="images/69298-web-designer.gif" alt="" class="about__inner-img about-mobile-img">
+                            <p class="about__inner-hero-text">
+                                На этом этапе самые опытные программисты нашей страны приступят к созданию вашего сайта. Дизайн, спецификации, структура сайта подготавливаются заранее, чтобы обеспечить корректное выполнение программирования.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__inner  about__inner-5">
+                        <div class="about__inner-hero section-4__hero">
+                            <h3 class="about__inner-hero-title">Сайт размещается в <span>интернете</span></h3>
+                            <img src="images/69266-work.gif" alt="" class="about__inner-img about-mobile-img">
+                            <p class="about__inner-hero-text">
+                                Разработка сайтов в Узбекистане требует также определенного бронирования места на сервере для помещения информации.
+                            </p>
+                        </div>
+                        <img src="images/69266-work.gif" alt="" class="about__inner-img about-desk-img section-3__img">
+                    </div>
+                    <div class="about__inner about__inner-5">
+                        <img src="images/68889-deliverame-app.gif" alt="" class="about__inner-img about-desk-img section-3__img">
+                        <div class="about__inner-hero section-4__hero">
+                            <h3 class="about__inner-hero-title">Проводятся <span>испытания</span></h3>
+                            <img src="images/68889-deliverame-app.gif" alt="" class="about__inner-img about-mobile-img">
+                            <p class="about__inner-hero-text">
+                                Любой работе свойственны ошибки. Под испытаниями имеется ввиду то, что когда разработка веб-сайта будет завершена, специальные сотрудники тщательно протестируют его. Тогда все дефекты будут выявлены и исправлены.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__btn">
+                        <a href="./services.html">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-content-col">
+                        <a href="#!" class="footer-logo"><img src="images/footer-logo.svg" alt=""></a>
+                        <select name="" id="" class="footer-select">
+                            <option value="0" class="footer-select-opt">Русский</option>
+                            <option value="1" class="footer-select-opt">Узбекский</option>
+                            <option value="2" class="footer-select-opt">Английский</option>
+                        </select>
+                    </div>
+                    <div class="footer-content-hero">
+                        <div class="footer-content-col">
+                            <span class="footer-content-title">Навигация</span>
+                            <a href="./indexMain.html" class="footer-content-link">Главная</a>
+                            <a href="./services.html" class="footer-content-link">Заказать дизайн</a>
+                            <a href="./works.html" class="footer-content-link">Портфолио</a>
+                            <a href="./about.html" class="footer-content-link">О нас</a>
+                            <a href="./contacts.html" class="footer-content-link">Контакты</a>
+                        </div>
+                        <div class="footer-content-col">
+                            <span class="footer-content-title">Наши контакты</span>
+                            <div class="footer-content-social-links">
+                                <span class="footer-content-social-links-title">Telegram :</span>
+                                <div>
+                                    <a href="#!">@IVCS_Design</a>
+                                    <a href="#!">@IVCS_Axe</a>
+                                    <a href="#!">@IVCS_Michael</a>
+                                </div>
+                            </div>
+                            <div class="footer-content-social-links">
+                                <span class="footer-content-social-links-title">Instagram :</span>
+                                <div>
+                                    <a href="#!">@axefreman</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-content-col">
+                            <span class="footer-content-title">о IVCS</span>
+                            <p class="footer-content-about">Всё, что мы делаем – мы делаем ради развития вашего бизнеса.</p>
+                        </div>
+                    </div>
+                    <div class="footer-content-col footer-content-social">
+                        <span class="footer-content-title">Наши контакты</span>
+                        <div>
+                            <a href="#!"><img src="images/footer-inst.png" alt=""></a>
+                            <a href="#!"><img src="images/footer-facebook.png" alt=""></a>
+                            <a href="#!"><img src="images/footer-youtube.png" alt=""></a>
+                        </div>
+                        <p class="footer-content-copyright">IVCS 2022 All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- script js -->
+    <script>
+        const body = document.querySelector('body')
+        const navbar = document.querySelector('.navbar__menu')
+        const navbarBtn = document.querySelector('.navbar__menu-btn')
+        const navbarSearch = document.querySelector('.navbar__search-icon')
+        const navbarMobileSearch = document.querySelector('.navbar__mobile-search-icon')
+        const navbarModal = document.querySelector('.navbar__modal')
+        const navbarModalBg = document.querySelector('.navbar__modal-bg')
+        navbarBtn.addEventListener('click',function(){
+            navbar.classList.toggle('active')
+        })
+        
+        navbarSearch.addEventListener('click',function(){
+            navbarModal.classList.add('active')
+        })
+
+        navbarMobileSearch.addEventListener('click',function(){
+            navbarModal.classList.add('active')
+        })
+
+        navbarModalBg.addEventListener('click',function(){
+            navbarModal.classList.remove('active')
+        })
+
+        const burgerBody = document.querySelector('.navbar__mobile')
+        const burgerMenu = document.querySelector('.burger__icon')
+        burgerMenu.addEventListener('click',function(){
+            burgerBody.classList.toggle('active')
+            body.classList.toggle('lock')
+        })
+    </script>
+    <script src="./app/preloader.js"></script>
+</body>
+</html>

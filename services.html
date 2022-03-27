@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVCS - Web Studio | Услуги</title>
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/active-icons.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <style>
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Bold.ttf') format('truetype');
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: 'raleway';
+            src: url('./fonts/Raleway-Black.ttf') format('truetype');
+            font-weight: 900;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'raleway';
+        }
+
+        .wrapper {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1650px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        .services {
+            width: 100%;
+            display: flex;
+            position: relative;
+        }
+
+        .calculator-body {
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+        }
+
+        .calculator {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 50px;
+            background-color: #F4C42B;
+            flex-direction: row-reverse;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .calculator:hover {
+            width: 400px;
+            border-radius: 0 50px 50px 25px;
+        }
+
+        .calculator-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: #F4C42B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator-content {
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            right: 100px;
+            background-color: #F4C42B;
+            padding: 30px;
+            border-radius: 0 0 0 25px;
+            display: flex;
+            align-items: center;
+        }
+        .calculator-content span{
+            text-align: start;
+            font-size: 20px;
+            line-height: 23px;
+            color: #000;
+            font-weight: 400;
+        }
+
+        .calculator__mobile {
+            width: 100%;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #F4C42B;
+            margin-top: 35px;
+        }
+
+        .calculator__mobile span {
+            font-weight: 300;
+            color: black;
+            font-size: 18px;
+        }
+
+        .services-content {
+            width: 100%;
+            display: flex;
+            height: 100vh;
+            overflow-y: scroll;
+            flex-direction: column;
+            align-items: center;
+            padding: 150px 15px 250px;
+        }
+        
+        .services-content::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .subtitle {
+            width: 100%;
+            text-align: center;
+            font-size: 41px;
+            font-weight: 400;
+            margin-bottom: 100px;
+        }
+
+        .subtitle span {
+            color: #F4C42B;
+            font-weight: 400;
+        }
+
+        .services-inner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 200px;
+            row-gap: 50px;
+        }
+
+        .services-inner-col {
+            width: 100%;
+            max-width: 376px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+        }
+
+        .services-item {
+            width: 100%;
+            height: 100px !important;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            background: url('./images/bg.png') no-repeat center center / cover;
+            position: relative;
+            transition: 300ms;
+        }
+
+        .services-item.active .services-item-hero img {
+            transform: rotate(-180deg);
+        }
+
+        .services-item.active {
+            height: 610px !important;
+        }
+
+        .services-item-hero {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 36px 32px;
+            cursor: pointer;
+        }
+
+        .services-item-hero img {
+            display: flex;
+            transition: 300ms;
+        }
+
+        .services-item-hero span {
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+            margin-right: 50px;
+        }
+
+        .services-item-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .services-item-list-link {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 36px;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 400;
+            border-top: 1px solid #F4C42B;
+        }
+
+        .services-item-hero-soon {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 36px 15px;
+            cursor: not-allowed;
+        }
+
+        .services-item-soon span {
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .services-item-soon {
+            width: 100%;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            background: url('./images/soon-bg.png') no-repeat center center / cover #8b8c8b;
+            position: relative;
+        }
+
+        /* media */
+        @media (max-width: 1152px) {
+            .services-content {
+                padding: 50px 0 150px;
+                height: 100%;
+                overflow-y: visible;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                max-width: 376px;
+            }
+
+            .subtitle {
+                font-weight: 900;
+                text-align: unset;
+                font-size: 22px;
+                margin-bottom: 60px;
+            }
+
+            .subtitle br {
+                display: none;
+            }
+
+            .subtitle span {
+                font-weight: 900;
+            }
+
+            .services-inner {
+                row-gap: 25px;
+            }
+
+            .services-inner-col {
+                row-gap: 25px;
+            }
+
+            .services-item {
+                background-image: unset;
+                background-color: #141414;
+                height: 60px !important;
+            }
+            .services-item.active{
+                height: 375px !important;
+            }
+
+            .services-item-hero {
+                padding: 20px;
+                justify-content: space-between;
+            }
+
+            .services-item-hero span {
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            .services-item-list-link {
+                font-size: 18px;
+                font-weight: 300;
+                padding: 20px;
+            }
+
+            .services-item-soon {
+                background-image: unset;
+                background-color: #b9b9b9;
+            }
+
+            .services-item-hero-soon {
+                padding: 20px;
+                justify-content: center;
+            }
+
+            .services-item-soon span {
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            .calculator {
+                display: none;
+            }
+
+            .calculator__mobile {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="pagePreloader" class="preloader">
+        <div class="loader"></div>
+        <img class="preloader-img" src="./images/preloader.png" alt="">
+    </div>
+    <div class="wrapper">
+        <div class="navbar__modal">
+            <div class="navbar__modal-bg"></div>
+            <div class="navbar__modal-inner">
+                <p>Введите то что вас <span>интересует</span></p>
+                <div>
+                    <input type="text" placeholder="Сайт визитка...">
+                    <button><img src="images/navbar-search.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__mobile">
+            <div class="container">
+                <div class="navbar__mobile-nav">
+                    <a href="#!" class="navbar__mobile-logo"><img src="images/navbar-mobile.svg" alt=""></a>
+                    <div class="navbar__mobile-inner">
+                        <div class="navbar__search">
+                            <button type="button" class="navbar__mobile-search-icon">
+                                <img src="images/navbar-search.svg" alt="">                     
+                            </button>
+                        </div>
+                        <div class="burger__body">
+                            <div class="burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="burger__list">
+                                <a href="#!" class="burger__logo"><img src="images/burger__logo.png" alt=""></a>
+                                <select name="" id="" class="navbar__select navbar__select-mobile">
+                                    <option value="0">Русский</option>
+                                    <option value="1">Узбекский</option>
+                                    <option value="2">Английский</option>
+                                </select>
+                                <a href="./indexMain.html" class="burger__link">Главная</a>
+                                <a href="./services.html" class="burger__link">Услуги</a>
+                                <a href="./works.html" class="burger__link">Портфолио</a>
+                                <a href="./about.html" class="burger__link">О нас</a>
+                                <a href="./contacts.html" class="burger__link">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="services">
+            <nav class="navbar">
+                <div class="navbar__search">
+                    <button type="button" class="navbar__search-icon">
+                        <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
+                        </svg>                        
+                    </button>
+                </div>
+                <div class="navbar__menu">
+                    <button type="button" class="navbar__menu-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3984 11.9996L15.9984 5.59961M22.3984 11.9996L15.9984 18.3996M22.3984 11.9996H2.39844" stroke="white"/>
+                        </svg>
+                    </button>
+                    <div class="navbar__menu-def">
+                        <div class="navbar__menu-def-language">
+                            <select name="" id="">
+                                <option value="0">Ru</option>
+                                <option value="1">Uz</option>
+                                <option value="2">En</option>
+                            </select>
+                        </div>
+                        <ul class="navbar__menu-def-list">
+                            <li>
+                                <a href="./indexMain.html">
+                                    <img src="images/navbar-icon-1.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./services.html">
+                                    <img src="images/navbar-2-active.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./works.html">
+                                    <img src="images/navbar-icon-3.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./about.html">
+                                    <img src="images/navbar-icon-4.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./contacts.html">
+                                    <img src="images/navbar-icon-5.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar__menu-full">
+                        <div class="navbar__menu-full-hero">
+                            <a href="#!" class="navbar__logo"><img src="images/navbar-logo.svg" alt=""></a>
+                            <select name="" id="" class="navbar__select">
+                                <option value="0">Русский</option>
+                                <option value="1">Узбекский</option>
+                                <option value="2">Английский</option>
+                            </select>
+                        </div>
+                        <div class="navbar__menu-full-inner">
+                            <ul class="navbar__menu-full-list">
+                                <li>
+                                    <a href="./indexMain.html">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="./services.html" class="active-icon">Услуги</a>
+                                </li>
+                                <li>
+                                    <a href="./works.html">Портфолио</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="./contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                            <div class="navbar__menu-full-social">
+                                <a href="#!"><img src="images/navbar-inst.png" alt=""></a>
+                                <a href="#!"><img src="images/navbar-facebook.png" alt=""></a>
+                                <a href="#!"><img src="images/navbar-youtube.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="services-content">
+                    <h2 class="subtitle">ЕСЛИ ВЫ НА ЭТОЙ СТРАНИЦЕ <br>ЗНАЧИТ ВЫ <span> НА ВЕРНОМ ПУТИ</span> РАЗВИТИЯ СВОЕГО САЙТА</h2>
+                    <div class="services-inner">
+                        <div class="services-inner-col">
+                            <div class="services-item" id="services-1">
+                                <div class="services-item-hero">
+                                    <span>Web Разработка</span>
+                                    <img src="images/accordion-arrow.svg" alt="">
+                                </div>
+                                <div class="services-item-list">
+                                    <a href="./site-visit.html" class="services-item-list-link">Сайт визитка</a>
+                                    <a href="#!" class="services-item-list-link">Корпоративный сайт</a>
+                                    <a href="#!" class="services-item-list-link">Интернет-магазин</a>
+                                    <a href="#!" class="services-item-list-link">Интернет-витрина</a>
+                                    <a href="#!" class="services-item-list-link">Промо-сайт</a>
+                                </div>
+                            </div>
+                            <div class="services-item" id="services-2">
+                                <div class="services-item-hero">
+                                    <span>Разработка</span>
+                                    <img src="images/accordion-arrow.svg" alt="">
+                                </div>
+                                <div class="services-item-list">
+                                    <a href="#!" class="services-item-list-link">Фронтэнд разработка</a>
+                                    <a href="#!" class="services-item-list-link">Бэкенд разработка</a>
+                                    <a href="#!" class="services-item-list-link">Телеграм боты</a>
+                                    <a href="#!" class="services-item-list-link">SEO</a>
+                                    <a href="#!" class="services-item-list-link">Личное приложение</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-inner-col">
+                            <div class="services-item" id="services-3">
+                                <div class="services-item-hero">
+                                    <span>Графический дизайн</span>
+                                    <img src="images/accordion-arrow.svg" alt="">
+                                </div>
+                                <div class="services-item-list">
+                                    <a href="#!" class="services-item-list-link">Фирменный стиль</a>
+                                    <a href="#!" class="services-item-list-link">Наружная реклама</a>
+                                    <a href="#!" class="services-item-list-link">Дизайн и упаковки</a>
+                                    <a href="#!" class="services-item-list-link">Оформление соцсетей</a>
+                                    <a href="#!" class="services-item-list-link">Лендинг</a>
+                                </div>
+                            </div>
+                            <div class="services-item-soon">
+                                <div class="services-item-hero-soon">
+                                    <span>Тут скоро будут новые услуги</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#!" class="calculator__mobile">
+                            <span>Узнайте примерную стоимость вашего сайта</span>
+                            <img src="images/calculator.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="calculator-body">
+                <a href="#!" class="calculator">
+                    <div class="calculator-icon"><img src="./images/calculator.svg" alt=""></div>
+                    <div class="calculator-content">
+                        <span>Узнайте примерную стоимость вашего сайта</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-content-col">
+                        <a href="#!" class="footer-logo"><img src="images/footer-logo.svg" alt=""></a>
+                        <select name="" id="" class="footer-select">
+                            <option value="0" class="footer-select-opt">Русский</option>
+                            <option value="1" class="footer-select-opt">Узбекский</option>
+                            <option value="2" class="footer-select-opt">Английский</option>
+                        </select>
+                    </div>
+                    <div class="footer-content-hero">
+                        <div class="footer-content-col">
+                            <span class="footer-content-title">Навигация</span>
+                            <a href="./indexMain.html" class="footer-content-link">Главная</a>
+                            <a href="./services.html" class="footer-content-link">Заказать дизайн</a>
+                            <a href="./works.html" class="footer-content-link">Портфолио</a>
+                            <a href="./about.html" class="footer-content-link">О нас</a>
+                            <a href="./contacts.html" class="footer-content-link">Контакты</a>
+                        </div>
+                        <div class="footer-content-col">
+                            <span class="footer-content-title">Наши контакты</span>
+                            <div class="footer-content-social-links">
+                                <span class="footer-content-social-links-title">Telegram :</span>
+                                <div>
+                                    <a href="#!">@IVCS_Design</a>
+                                    <a href="#!">@IVCS_Axe</a>
+                                    <a href="#!">@IVCS_Michael</a>
+                                </div>
+                            </div>
+                            <div class="footer-content-social-links">
+                                <span class="footer-content-social-links-title">Instagram :</span>
+                                <div>
+                                    <a href="#!">@axefreman</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-content-col">
+                            <span class="footer-content-title">о IVCS</span>
+                            <p class="footer-content-about">Всё, что мы делаем – мы делаем ради развития вашего бизнеса.</p>
+                        </div>
+                    </div>
+                    <div class="footer-content-col footer-content-social">
+                        <span class="footer-content-title">Наши контакты</span>
+                        <div>
+                            <a href="#!"><img src="images/footer-inst.png" alt=""></a>
+                            <a href="#!"><img src="images/footer-facebook.png" alt=""></a>
+                            <a href="#!"><img src="images/footer-youtube.png" alt=""></a>
+                        </div>
+                        <p class="footer-content-copyright">IVCS 2022 All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const servicesItem1 = document.getElementById('services-1')
+        servicesItem1.addEventListener('click',function(){
+            servicesItem1.classList.toggle('active')
+        })
+
+        const servicesItem2 = document.getElementById('services-2')
+        servicesItem2.addEventListener('click',function(){
+            servicesItem2.classList.toggle('active')
+        })
+
+        const servicesItem3 = document.getElementById('services-3')
+        servicesItem3.addEventListener('click',function(){
+            servicesItem3.classList.toggle('active')
+        })
+
+        const body = document.querySelector('body')
+        const navbar = document.querySelector('.navbar__menu')
+        const navbarBtn = document.querySelector('.navbar__menu-btn')
+        const navbarSearch = document.querySelector('.navbar__search-icon')
+        const navbarMobileSearch = document.querySelector('.navbar__mobile-search-icon')
+        const navbarModal = document.querySelector('.navbar__modal')
+        const navbarModalBg = document.querySelector('.navbar__modal-bg')
+        navbarBtn.addEventListener('click',function(){
+            navbar.classList.toggle('active')
+        })
+        
+        navbarSearch.addEventListener('click',function(){
+            navbarModal.classList.add('active')
+        })
+
+        navbarMobileSearch.addEventListener('click',function(){
+            navbarModal.classList.add('active')
+        })
+
+        navbarModalBg.addEventListener('click',function(){
+            navbarModal.classList.remove('active')
+        })
+
+        const burgerBody = document.querySelector('.navbar__mobile')
+        const burgerMenu = document.querySelector('.burger__icon')
+        burgerMenu.addEventListener('click',function(){
+            burgerBody.classList.toggle('active')
+            body.classList.toggle('lock')
+        })
+    </script>
+    <script src="./app/preloader.js"></script>
+</body>
+</html>

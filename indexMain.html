@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVCS - Web Studio | Главная</title>
+    <link rel="stylesheet" href="./assets/bootstrapmin.css">
+    <link rel="stylesheet" href="./assets/all.min.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/scroll.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <style>
+        .container {
+            width: 100%;
+            max-width: 1650px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .container {
+                max-width: 376px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="pagePreloader" class="preloader">
+        <div class="loader"></div>
+        <img class="preloader-img" src="./images/preloader.png" alt="">
+    </div>
+
+
+    <header class="header w-100 d-flex justify-content-start align-items-end">
+        <div class="header__navigation">
+            <button id="searchBtn" class="header__nav-search d-flex justify-content-center align-items-center h-100">
+                <svg class="svg-search" width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
+                </svg> 
+            </button>
+            <nav class="header__nav d-flex justify-content-between align-items-center flex-column">
+                <div class="header__nav-btn">
+                    <button class="open">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3984 11.9996L15.9984 5.59961M22.3984 11.9996L15.9984 18.3996M22.3984 11.9996H2.39844" stroke="white"/>
+                        </svg>
+                    </button>
+                    <button class="close">
+                        <svg class="svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3984 11.9996L15.9984 5.59961M22.3984 11.9996L15.9984 18.3996M22.3984 11.9996H2.39844" stroke="white"/>
+                        </svg>
+                    </button>
+                </div>
+                <select class="form-select active-lang" aria-label="Default select example">
+                    <option class="active-lang-txt" selected>РУ</option>
+                    <option class="active-lang-txt" value="1">UZ</option>
+                    <option class="active-lang-txt" value="2">ENG</option>
+                </select>
+                <ul class="header__nav-icons">
+                    <li class="header__nav-i-li"><a href="./indexMain.html" class="header__nav-i-link"><img class="header__icons-img" src="./images/home.png" alt=""></a></li>
+                    <li class="header__nav-i-li"><a href="./services.html" class="header__nav-i-link"><img class="header__icons-img" src="./images/shop.png" alt=""></a></li>
+                    <li class="header__nav-i-li"><a href="./works.html" class="header__nav-i-link"><img class="header__icons-img" src="./images/image.png" alt=""></a></li>
+                    <li class="header__nav-i-li"><a href="./about.html" class="header__nav-i-link"><img class="header__icons-img" src="./images/simohamed.png" alt=""></a></li>
+                    <li class="header__nav-i-li"><a href="./contacts.html" class="header__nav-i-link"><img class="header__icons-img" src="./images/phone.png" alt=""></a></li>
+                </ul>
+                <div class="header__nav-top-box">
+                    <a class="d-flex justify-content-center" href="./index.html"><img class="header__logo" src="./images/logo.png" alt=""></a>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Русский</option>
+                        <option value="1">Узбекский</option>
+                        <option value="2">Английский</option>
+                    </select>
+                </div>
+                <ul class="header__nav-ul">
+                    <li class="header__nav-li"><a href="./indexMain.html" class="header__nav-link hactive">Главная</a></li>
+                    <li class="header__nav-li"><a href="./services.html" class="header__nav-link">Услуги</a></li>
+                    <li class="header__nav-li"><a href="./works.html" class="header__nav-link">Портфолио</a></li>
+                    <li class="header__nav-li"><a href="./about.html" class="header__nav-link">О нас</a></li>
+                    <li class="header__nav-li"><a href="./contacts.html" class="header__nav-link">Контакты</a></li>
+                    <ul class="header__nav-contact d-flex justify-content-between align-items-center">
+                        <li><a href="#!" class="header__nav-contact-link"><img class="header__nav-contact-img" src="./images/Instagram.png" alt=""></a></li>
+                        <li><a href="#!" class="header__nav-contact-link"><img class="header__nav-contact-img" src="./images/Facebook.png" alt=""></a></li>
+                        <li><a href="#!" class="header__nav-contact-link"><img class="header__nav-contact-img" src="./images/youtube.png" alt=""></a></li>
+                    </ul>
+                </ul>
+            </nav>
+        </div>
+        <nav class="navbar__mobile d-flex justify-content-between align-items-center w-100">
+            <a href="#!" class="navbar__mobile-logo"><img src="./images/navbar__mobile-logo.png" alt=""></a>
+            <div class="navbar__mobile-box d-flex justify-content-around">
+                <button class="navbar__mobile-search">
+                    <svg class="svg-search" width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
+                </svg>
+            </button>
+                <div class="burger__body d-flex justify-content-around align-items-center">
+                    <div class="burger__icon">
+                        <span class="burger__icon-span"></span>
+                        <span class="burger__icon-span"></span>
+                        <span class="burger__icon-span"></span>
+                    </div>
+                    <div class="burger__list p-absolute w-100 d-flex justify-content-center align-items-center flex-column">
+                        <a href="#!" class="burger__logo"><img src="./images/burger-menu-logo.png" alt=""></a>
+                        <select name="" id="" class="navbar__select navbar__select-mobile">
+                            <option value="0">Русский</option>
+                            <option value="1">Узбекский</option>
+                            <option value="2">Английский</option>
+                        </select>
+                        <a href="./indexMain.html" class="burger__link">Главная</a>
+                        <a href="./services.html" class="burger__link">Услуги</a>
+                        <a href="./works.html" class="burger__link">Портфолио</a>
+                        <a href="./about.html" class="burger__link">О нас</a>
+                        <a href="./contacts.html" class="burger__link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header__right w-100 h-100 p-relative">
+            <div class="header__right-content w-100 h-100 p-relative d-flex justify-content-evenly align-items-start">
+                <div class="header__right-content-box d-flex justify-content-center align-items-center flex-column">
+                    <img class="header__right-content-img-1" src="./images/hIMG.png" alt="">
+                    <div class="header__mobile-content d-none justify-content-center align-items-center">
+                        <img src="./images/mobile-content-img.png" alt="">
+                        <img src="./images/mobile-content-img1.png" alt="">
+                    </div>
+                    <h1 class="header__right-content-title">Воплощаем уникальные веб-сайты в <span class="header-span">Ташкенте</span></h1>
+                    <img class="header__right-mobile-img d-none" src="./images/72178-man-working-under-lamp-light.gif" alt="">
+                    <p class="header__right-content-txt">Вашему бизнесу нужен веб сайт, реклама в интернете и одновременно результат?</p>
+                    <p class="header__right-content-txt">Тогда этим должны заняться только мастера своего дела!</p>
+                    <div class="header__right-content-item w-100 d-flex justify-content-start align-items-center">
+                        <a href="#!" class="header__right-content-btn hover1">Консультация</a>
+                        <a href="#!" class="header__right-content-btn hover2">Расcчитать сайт</a>
+                    </div>
+                </div>
+                <div class="header__right-content-box d-flex flex-column align-items-center justify-content-center">
+                    <img class="header__right-content-img-2" src="./images/code.png" alt="img">
+                    <img class="header__right-content-img-3" src="./images/72178-man-working-under-lamp-light.gif" alt="img">
+                </div>
+            </div>
+        </div>
+        <img class="header__right-content-footer-img d-block" src="./images/hFooter.png" alt="img">
+        <div class="header__wrapper p-absolute w-100 d-flex justify-content-center align-items-end">
+            <a href="#main" class="header__content-btn"><span class="header__content-btn-span"><img src="./images/scroll-down.png" alt=""></span></a>
+        </div>
+        <!-- header search modal window -->
+        <div id="modalSearch" class="header__search-wrapper p-absolute w-100 h-100">
+            <div id="searchClose" class="header__contact"></div>
+            <div class="search-box d-flex flex-column align-items-center">
+                <h2 class="header__search-title">Введите то что вас <span class="header-span">интересует</span></h2>
+                <form class="search-form p-relative w-100 d-flex justify-content-center align-items-center" action="">
+                    <input class="search-input" type="search" placeholder="Сайт визитка..." title="Сайт визитка...">
+                    <button class="p-absolute wrapper-search">
+                        <svg class="svg-search" width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
+                        </svg>
+                    </button>               
+                </form>
+            </div>
+        </div>
+        <!-- header contact modal window -->
+        <div id="hContact" class="header__contact p-absolute w-100 h-100">
+            <div id="contactClose"></div>
+            <div class="search-box d-flex flex-column align-items-center p-relative">
+                <h2 class="header__search-title"><span class="header-span">Позвоните</span> нам или <span class="header-span">напишите</span></h2>
+                <div class="d-flex" style="margin-top: 50px;">
+                    <a href="tel:+998990555342" style="margin-right: 25px;" class="search-close-btn">Позвонить</a>
+                    <a href="mailto:mardonov.mexriddin1997@gmail.com" class="search-close-btn">Написать</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main">
+
+        <section id="whyweare" class="about">
+            <div class="container-fluid">
+                <div class="about-box p-relative d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="about__title">ПОЧЕМУ <span class="header-span">ИМЕННО</span>М<span class="p-relative">Ы<img class="about-lamp p-absolute" src="./images/lamp2.png" alt="img"></span>?</h1>
+                </div>
+                <div class="about-box d-flex justify-content-evenly p-relative">
+                    <div class="about-box-item p-relative d-flex justify-content-center">
+                        <img class="about-img as-1" src="./images/why1.png" alt="img">
+                        <img class="about-img-vector-1" src="./images/vectorWhy1.png" alt="img">
+                    </div>
+                    <div class="about-box-item p-relative d-flex justify-content-center">
+                        <img class="about-img as-2" src="./images/why2.png" alt="img">
+                        <img class="about-img-vector-2" src="./images/vectorWhy2.png" alt="img">
+                    </div>
+                    <div class="about-box-item p-relative d-flex justify-content-center">
+                        <img class="about-img as-3" src="./images/why3.png" alt="img">
+                        <img class="about-img-vector-3" src="./images/vectorWhy1.png" alt="img">
+                    </div>
+                    <img class="about-img as-4" src="./images/why4.png" alt="img">
+                </div>
+            </div>
+        </section>
+        <section class="our-works">
+            <div class="container-fluid">
+                <h1 class="work__title">Наши работы</h1>
+                <div class="works-box d-flex flex-column align-items-center justify-content-center">
+                    <div class="works-item d-flex justify-content-center align-items-center">
+                        <a href="#!" class="works-link">
+                            <img class="works-img" src="./images/works1.png" alt="">
+                            <span class="works-span">Creative</span>
+                        </a>
+                        <a href="#!" class="works-link">
+                            <img class="works-img" src="./images/works2.png" alt="">
+                            <span class="works-span">Web SM</span>
+                        </a>
+                        <a href="#!" class="works-link">
+                            <img class="works-img" src="./images/works3.png" alt="">
+                            <span class="works-span">Dad’s Burger</span>
+                        </a>
+                    </div>
+                    <a href="./works.html" class="works-btn hover1">Больше</a>
+                </div>
+            </div>
+        </section>
+        <section class="quiz">
+            <div class="container-fluid">
+                <h1 class="work__title">Есть вопросы?</h1>
+                <div class="work-box d-flex align-items-start justify-content-around">
+                    <div class="quiz__left-box p-relative d-flex flex-column align-content-center justify-content-center">
+                        <h2 class="quiz__left-title">Нужна <span class="header-span">помощь?</span></h2>
+                        <h3 class="quiz__left-title-2">Просто напишите нам и мы с радостью проконсультируем вас </h3>
+                        <p class="quiz__left-txt">Разработка и создание сайтов по всему миру от Лендингов и Корпоративных до Онлайн магазинов и Порталов</p>
+                        <img class="quiz-img p-absolute" src="./images/lamp.png" alt="img">
+                        <div class="quiz__left-item">
+                            <h1 class="work__title works-contact-title">Контакты</h1>
+                            <div class="quiz__left-item-contact d-flex align-items-center justify-content-start">
+                                <a href="#!" class="quiz__contact-link">@IVCS_Design</a>
+                                <a href="#!" class="quiz__contact-link">@IVCS_Axe</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__right-box p-relative d-flex flex-column align-items-end justify-content-center">
+                        <form class="quiz__right-form d-flex flex-column align-items-center justify-content-center">
+                            <input class="right-input" type="text" placeholder="Ваше имя">
+                            <input class="right-input" type="email" placeholder="E-mail адрес">
+                            <input class="right-input" type="number" placeholder="Ваш номер">
+                            <textarea class="right-input" name="" id="" cols="30" rows="3" placeholder="Напишите нам..."></textarea>
+                        </form>
+                        <img class="quiz__right-img p-absolute" src="./images/human.png" alt="">
+                        <button type="submit" class="works-btn hover1">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-col">
+                    <a href="#!" class="footer-logo"><img src="./images/footer-logo.svg" alt=""></a>
+                    <select name="" id="" class="footer-select">
+                        <option value="0" class="footer-select-opt">Русский</option>
+                        <option value="1" class="footer-select-opt">Узбекский</option>
+                        <option value="2" class="footer-select-opt">Английский</option>
+                    </select>
+                </div>
+                <div class="footer-content-hero">
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">Навигация</span>
+                        <a href="./indexMain.html" class="footer-content-link">Главная</a>
+                        <a href="./services.html" class="footer-content-link">Заказать дизайн</a>
+                        <a href="./works.html" class="footer-content-link">Портфолио</a>
+                        <a href="./about.html" class="footer-content-link">О нас</a>
+                        <a href="./contacts.html" class="footer-content-link">Контакты</a>
+                    </div>
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">Наши контакты</span>
+                        <div class="footer-content-social-links">
+                            <span class="footer-content-social-links-title">Telegram :</span>
+                            <div>
+                                <a href="#!">@IVCS_Design</a>
+                                <a href="#!">@IVCS_Axe</a>
+                                <a href="#!">@IVCS_Michael</a>
+                            </div>
+                        </div>
+                        <div class="footer-content-social-links">
+                            <span class="footer-content-social-links-title">Instagram :</span>
+                            <div>
+                                <a href="#!">@axefreman</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">о IVCS</span>
+                        <p class="footer-content-about">Всё, что мы делаем – мы делаем ради развития вашего бизнеса.</p>
+                    </div>
+                </div>
+                <div class="footer-content-col footer-content-social">
+                    <span class="footer-content-title">Наши контакты</span>
+                    <div>
+                        <a href="#!"><img src="./images/footer-inst.png" alt=""></a>
+                        <a href="#!"><img src="./images/footer-facebook.png" alt=""></a>
+                        <a href="#!"><img src="./images/footer-youtube.png" alt=""></a>
+                    </div>
+                    <p class="footer-content-copyright">IVCS 2022 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>   
+
+    <script src="./assets/propper.js"></script>
+    <script src="./app/preloader.js"></script>
+    <script src="./app/app.js"></script>
+
+</body>
+</html>

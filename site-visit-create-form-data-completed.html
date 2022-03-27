@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVCS - Web Studio | Заявка - отправленна</title>
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/active-icons.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <style>
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'raleway';
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1650px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* content */
+.site-visit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-visit__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 50px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.site-visit__content::-webkit-scrollbar {
+    width: 0;
+}
+
+.site-visit__content-atribute {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #F4C42B;
+    border-radius: 5px;
+}
+
+.site-visit__content-atribute span {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}
+
+.site-visit__content-inner {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    min-height: 850px;
+}
+
+.site-visit__content-inner-btn-main {
+    background-color: #F4C42B;
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.site-visit__content-inner-btn-main:hover {
+    color: white;
+    background-color: black;
+}
+
+.star {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.star-1 {
+    left: 0;
+    top: 0;
+}
+
+.star-2 {
+    right: 0;
+    top: 0;
+}
+
+.star-3 {
+    bottom: 0;
+    left: 0;
+}
+
+.star-4 {
+    bottom: 0;
+    right: 0;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 48px;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.subtitle span {
+    color: #F4C42B;
+}
+
+.site-visit__content-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle-small {
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 500;
+    color: #141414;
+}
+
+.site-visit__content-main-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1400px) {
+    .site-visit__content-main-btn-item {
+        width: 32%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .site-visit__content-main {
+        align-items: center;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .site-visit__content-main-info {
+        width: 100%;
+    }
+
+    .site-visit__content-main-inner {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .subtitle-small {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1152px) {
+    .wrapper {
+        min-height: unset;
+    }
+
+    .site-visit {
+        padding: 70px 0;
+    }
+
+    .site-visit__content {
+        height: 100%;
+        overflow-y: visible;
+    }
+}
+
+@media (max-width: 992px) {
+    .site-visit__content-main-btn-item {
+        width: 48%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-visit__content-inner {
+        min-height: unset;
+    }
+
+    .star {
+        display: none;
+    }
+    
+    .site-visit__content-atribute {
+        width: 100%;
+        padding: 15px;
+        top: 0;
+        justify-content: flex-start;
+    }
+
+    .subtitle {
+        font-size: 25px;
+        margin-bottom: 15px;
+        font-weight: 900;
+    }
+
+    .subtitle-small {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+
+    .site-visit__content-main {
+        row-gap: 0;
+    }
+
+    .container {
+        max-width: 376px;
+    }
+
+    .site-visit__content-main-btn-item {
+        width: 100%;
+    }
+
+    .site-visit__content-main-inner-item span {
+        font-size: 20px;
+    }
+
+    .site-visit__content-main-inner-item p {
+        font-size: 16px;
+    }
+}
+.hover1{
+    background: #F4C42B !important;
+    color: #101011 !important;
+    }
+    .hover2{
+    background: rgb(0, 0, 0) !important;
+    color: #fff !important;
+    }
+
+    .hover1:hover{
+    box-shadow: 0 0 10px #F4C42B !important;
+    background-color: #F4C42B !important;
+    }
+    .hover2:hover{
+    box-shadow: 0 0 10px rgb(0, 0, 0) !important;
+    background-color: rgb(0, 0, 0) !important;
+    }
+    </style>
+</head>
+<body>
+    <div id="pagePreloader" class="preloader">
+        <div class="loader"></div>
+        <img class="preloader-img" src="./images/preloader.png" alt="">
+    </div>
+    <div class="wrapper">
+        <div class="navbar__modal">
+            <div class="navbar__modal-bg"></div>
+            <div class="navbar__modal-inner">
+                <p>Введите то что вас <span>интересует</span></p>
+                <div>
+                    <input type="text" placeholder="Сайт визитка...">
+                    <button><img src="images/navbar-search.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__mobile">
+            <div class="container">
+                <div class="navbar__mobile-nav">
+                    <a href="#!" class="navbar__mobile-logo"><img src="images/navbar-mobile.svg" alt=""></a>
+                    <div class="navbar__mobile-inner">
+                        <div class="navbar__search">
+                            <button type="button" class="navbar__mobile-search-icon">
+                                <img src="images/navbar-search.svg" alt="">                     
+                            </button>
+                        </div>
+                        <div class="burger__body">
+                            <div class="burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="burger__list">
+                                <a href="#!" class="burger__logo"><img src="images/burger__logo.png" alt=""></a>
+                                <select name="" id="" class="navbar__select navbar__select-mobile">
+                                    <option value="0">Русский</option>
+                                    <option value="1">Узбекский</option>
+                                    <option value="2">Английский</option>
+                                </select>
+                                <a href="./indexMain.html" class="burger__link">Главная</a>
+                                <a href="./services.html" class="burger__link">Услуги</a>
+                                <a href="./works.html" class="burger__link">Портфолио</a>
+                                <a href="./about.html" class="burger__link">О нас</a>
+                                <a href="./contacts.html" class="burger__link">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="site-visit">
+            <nav class="navbar">
+                <div class="navbar__search">
+                    <button type="button" class="navbar__search-icon">
+                        <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
+                        </svg>                        
+                    </button>
+                </div>
+                <div class="navbar__menu">
+                    <button type="button" class="navbar__menu-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3984 11.9996L15.9984 5.59961M22.3984 11.9996L15.9984 18.3996M22.3984 11.9996H2.39844" stroke="white"/>
+                        </svg>
+                    </button>
+                    <div class="navbar__menu-def">
+                        <div class="navbar__menu-def-language">
+                            <select name="" id="">
+                                <option value="0">Ru</option>
+                                <option value="1">Uz</option>
+                                <option value="2">En</option>
+                            </select>
+                        </div>
+                        <ul class="navbar__menu-def-list">
+                            <li>
+                                <a href="./indexMain.html">
+                                    <img src="images/navbar-icon-1.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./services.html">
+                                    <img src="images/navbar-3-active.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./works.html">
+                                    <img src="images/navbar-icon-3.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./about.html">
+                                    <img src="images/navbar-icon-4.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./contacts.html">
+                                    <img src="images/navbar-icon-5.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar__menu-full">
+                        <div class="navbar__menu-full-hero">
+                            <a href="#!" class="navbar__logo"><img src="images/navbar-logo.svg" alt=""></a>
+                            <select name="" id="" class="navbar__select">
+                                <option value="0">Русский</option>
+                                <option value="1">Узбекский</option>
+                                <option value="2">Английский</option>
+                            </select>
+                        </div>
+                        <div class="navbar__menu-full-inner">
+                            <ul class="navbar__menu-full-list">
+                                <li>
+                                    <a href="./indexMain.html">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="./services.html" class="active-icon">Услуги</a>
+                                </li>
+                                <li>
+                                    <a href="./works.html">Портфолио</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="./contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                            <div class="navbar__menu-full-social">
+                                <a href="#!"><img src="images/navbar-inst.png" alt=""></a>
+                                <a href="#!"><img src="images/navbar-facebook.png" alt=""></a>
+                                <a href="#!"><img src="images/navbar-youtube.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="site-visit__content">
+                    <div class="site-visit__content-atribute">
+                        <span>Заказать дизайн - Сайт визитка - Создать - Создать сайт с нуля - Брифинг - Ваши данные</span>
+                    </div>
+                    <div class="site-visit__content-inner">
+                        <h2 class="subtitle">Готово</h2>
+                        <h3 class="subtitle-small">Данные успешно отправлены , ожидайте звонка менеджера .</h3>
+                        <a href="./indexMain.html" class="site-visit__content-inner-btn-main hover1">Главная</a>
+                        <img src="images/star.png" alt="" class="star star-1">
+                        <img src="images/star.png" alt="" class="star star-2">
+                        <img src="images/star.png" alt="" class="star star-3">
+                        <img src="images/star.png" alt="" class="star star-4">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-col">
+                    <a href="#!" class="footer-logo"><img src="images/footer-logo.svg" alt=""></a>
+                    <select name="" id="" class="footer-select">
+                        <option value="0" class="footer-select-opt">Русский</option>
+                        <option value="1" class="footer-select-opt">Узбекский</option>
+                        <option value="2" class="footer-select-opt">Английский</option>
+                    </select>
+                </div>
+                <div class="footer-content-hero">
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">Навигация</span>
+                        <a href="./indexMain.html" class="footer-content-link">Главная</a>
+                        <a href="./services.html" class="footer-content-link">Заказать дизайн</a>
+                        <a href="./works.html" class="footer-content-link">Портфолио</a>
+                        <a href="./about.html" class="footer-content-link">О нас</a>
+                        <a href="./contacts.html" class="footer-content-link">Контакты</a>
+                    </div>
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">Наши контакты</span>
+                        <div class="footer-content-social-links">
+                            <span class="footer-content-social-links-title">Telegram :</span>
+                            <div>
+                                <a href="#!">@IVCS_Design</a>
+                                <a href="#!">@IVCS_Axe</a>
+                                <a href="#!">@IVCS_Michael</a>
+                            </div>
+                        </div>
+                        <div class="footer-content-social-links">
+                            <span class="footer-content-social-links-title">Instagram :</span>
+                            <div>
+                                <a href="#!">@axefreman</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">о IVCS</span>
+                        <p class="footer-content-about">Всё, что мы делаем – мы делаем ради развития вашего бизнеса.</p>
+                    </div>
+                </div>
+                <div class="footer-content-col footer-content-social">
+                    <span class="footer-content-title">Наши контакты</span>
+                    <div>
+                        <a href="#!"><img src="images/footer-inst.png" alt=""></a>
+                        <a href="#!"><img src="images/footer-facebook.png" alt=""></a>
+                        <a href="#!"><img src="images/footer-youtube.png" alt=""></a>
+                    </div>
+                    <p class="footer-content-copyright">IVCS 2022 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const body = document.querySelector('body')
+        const navbar = document.querySelector('.navbar__menu')
+        const navbarBtn = document.querySelector('.navbar__menu-btn')
+        const navbarSearch = document.querySelector('.navbar__search-icon')
+        const navbarMobileSearch = document.querySelector('.navbar__mobile-search-icon')
+        const navbarModal = document.querySelector('.navbar__modal')
+        const navbarModalBg = document.querySelector('.navbar__modal-bg')
+        navbarBtn.addEventListener('click',function(){
+            navbar.classList.toggle('active')
+        })
+        
+        navbarSearch.addEventListener('click',function(){
+            navbarModal.classList.add('active')
+        })
+
+        navbarMobileSearch.addEventListener('click',function(){
+            navbarModal.classList.add('active')
+        })
+
+        navbarModalBg.addEventListener('click',function(){
+            navbarModal.classList.remove('active')
+        })
+
+        const burgerBody = document.querySelector('.navbar__mobile')
+        const burgerMenu = document.querySelector('.burger__icon')
+        burgerMenu.addEventListener('click',function(){
+            burgerBody.classList.toggle('active')
+            body.classList.toggle('lock')
+        })
+    </script>
+    <script src="./app/preloader.js"></script>
+</body>
+</html>

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVCS - Web Studio | Сайт-визитка-создать</title>
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/active-icons.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <style>
+        @font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'raleway';
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1650px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* content */
+.site-visit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-visit__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 50px 0;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.site-visit__content::-webkit-scrollbar {
+    width: 0;
+}
+
+.site-visit__content-atribute {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #F4C42B;
+    border-radius: 5px;
+}
+
+.site-visit__content-atribute span {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}
+
+.site-visit__content-inner {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 48px;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 940px;
+}
+
+.subtitle span {
+    color: #F4C42B;
+}
+
+.site-visit__content-inner-btn-back {
+    position: absolute;
+    left: 0;
+    top:0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+.site-visit__content-inner-btn-back svg {
+    stroke: #1D1929;
+    transition: 0.3s;
+}
+
+.site-visit__content-inner-btn-back:hover {
+    background-color: #1D1929;
+}
+
+.site-visit__content-inner-btn-back:hover svg {
+    stroke: #fff;
+}
+
+.site-visit__content-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle-small {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.site-visit__content-main-text {
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.site-visit__content-main-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1.5%;
+    row-gap: 20px;
+}
+
+.site-visit__content-main-btn-item {
+    width: 23%;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    background: transparent;
+    outline: none;
+    padding: 21px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.site-visit__content-main-btn-item.active {
+    color: white;
+    background-color: black;
+}
+
+.site-visit__content-main-btn-item:hover {
+    color: white;
+    background-color: black;
+}
+
+.site-visit__content-main-btn-next {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.site-visit__content-main-btn-next-item {
+    width: 49%;
+    border-radius: 10px;
+    color: #141414;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    background: #F4C42B;
+    outline: none;
+    padding: 21px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.btn-inner {
+    width: 49%;
+}
+
+.btn-disabled {
+    background-color: #F4C42B;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 21px;
+    color: #141414;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.btn-disabled.active {
+    display: none;
+}
+
+.btn-next {
+    background-color: #F4C42B;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 21px;
+    color: #141414;
+    font-weight: 400;
+    font-size: 24px;
+    transition: 0.3s
+}
+
+.btn-next.active {
+    display: flex;
+}
+
+.btn-inner__1 {
+    display: none;
+}
+
+.btn-inner__2 {
+    display: none;
+}
+
+.btn-inner__3 {
+    display: none;
+}
+
+.btn-inner__4 {
+    display: none;
+}
+
+.btn-inner__5 {
+    display: none;
+}
+
+.site-visit__content-hero {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-visit__content-hero-col {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+    min-height: 620px;
+}
+
+.custom-checkbox {
+    width: 100%;
+    max-width: 345px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.custom-checkbox span {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.custom-checkbox__item {
+    appearance: none;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background: url('./images/checkbox-disabled.svg');
+}
+
+.custom-checkbox__item:checked::before {
+    display: block;
+}
+
+.custom-checkbox__item::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('./images/checkbox-checked.svg');
+}
+
+.site-visit__content-hero-col-checkbox {
+    row-gap: 45px;
+    border-right: 1px solid black;
+}
+
+.site-visit__content-hero-col-total-title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.site-visit__content-hero-col-total-list {
+    width: 100%;
+    max-width: 345px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    row-gap: 30px;
+    justify-content: space-between;
+    min-height: 500px;
+}
+
+.site-visit__content-hero-col-total-list-choose {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.site-visit__content-hero-col-total-list-item {
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+    display: none;
+}
+
+.site-visit__content-hero-col-total-list-item.active {
+    display: flex;
+}
+
+.site-visit__content-hero-col-total-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.site-visit__content-hero-col-total-list-item span {
+    font-size: 24px;
+}
+
+.site-visit__content-hero-col-total-btn {
+    width: 100%;
+    max-width: 345px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F4C42B;
+    color: black;
+    transition: 0.3s;
+    font-size: 25px;
+}
+
+/* media */
+@media (max-width: 1200px) {
+    .site-visit__content-main {
+        align-items: center;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .site-visit__content-main-info {
+        width: 100%;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+
+    .site-visit__content-works-inner {
+        row-gap: 20px;
+    }
+
+    .site-visit__content-works-inner-item {
+        width: 49%;
+    }
+}
+
+@media (max-width: 1152px) {
+    .site-visit__content {
+        height: 100%;
+        overflow-y: visible;
+    }
+}
+
+@media (max-width: 992px) {
+    .subtitle {
+        font-size: 40px;
+    }
+
+    .site-visit__content-main-btn-item {
+        width: 48%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-visit__content-atribute {
+        width: 100%;
+        padding: 15px;
+        justify-content: flex-start;
+    }
+
+    .btn-inner {
+        width: 100%;
+    }
+
+    .btn-disabled {
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .btn-next {
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .site-visit__content-inner-btn-back {
+        top: -40px;
+    }
+
+    .site-visit {
+        padding-top: 50px;
+    }
+
+    .site-visit__content {
+        position: relative;
+        padding-top: 85px;
+        padding-bottom: 35px;
+    }
+
+    .site-visit__content-inner {
+        position: unset;
+    }
+
+    .subtitle {
+        font-size: 30px;
+        margin-bottom: 35px;
+        font-size: 25px;
+    }
+
+    .subtitle span {
+        color: black;
+    }
+
+    .subtitle-small {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 35px;
+    }
+
+    .site-visit__content-main-btn-next {
+        margin-top: 50px;
+        flex-wrap: wrap;
+        row-gap: 15px;
+    }
+
+    .site-visit__content-main-btn-next-item {
+        width: 100%;
+        padding: 14px;
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 376px;
+    }
+
+    .site-visit__content-main-btn-item {
+        width: 100%;
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .site-visit__content-main-text {
+        margin-bottom: 40px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .site-visit__content-main {
+        row-gap: 0;
+    }
+
+    .site-visit__content-hero {
+        flex-direction: column;
+    }
+
+    .site-visit__content-hero-col {
+        width: 100%;
+        min-height: unset;
+    }
+
+    .site-visit__content-hero-col-checkbox {
+        border-right: unset;
+        border-bottom: 1px solid black;
+        padding-bottom: 55px;
+        margin-bottom: 30px;
+    }
+
+    .custom-checkbox {
+        max-width: unset;
+    }
+
+    .site-visit__content-hero-col-total-list {
+        max-width: unset;
+        min-height: unset;
+    }
+
+    .site-visit__content-hero-col-total {
+        align-items: unset;
+    }
+}
+.hover1{
+    background: #F4C42B !important;
+    color: #101011 !important;
+    }
+    .hover2{
+    background: rgb(0, 0, 0) !important;
+    color: #fff !important;
+    }
+
+    .hover1:hover{
+    box-shadow: 0 0 10px #F4C42B !important;
+    background-color: #F4C42B !important;
+    }
+    .hover2:hover{
+    box-shadow: 0 0 10px rgb(0, 0, 0) !important;
+    background-color: rgb(0, 0, 0) !important;
+    }
+    </style>
+</head>
+<body>
+    <div id="pagePreloader" class="preloader">
+        <div class="loader"></div>
+        <img class="preloader-img" src="./images/preloader.png" alt="">
+    </div>
+    <div class="wrapper">
+        <div class="navbar__modal">
+            <div class="navbar__modal-bg"></div>
+            <div class="navbar__modal-inner">
+                <p>Введите то что вас <span>интересует</span></p>
+                <div>
+                    <input type="text" placeholder="Сайт визитка...">
+                    <button><img src="images/navbar-search.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__mobile">
+            <div class="container">
+                <div class="navbar__mobile-nav">
+                    <a href="#!" class="navbar__mobile-logo"><img src="images/navbar-mobile.svg" alt=""></a>
+                    <div class="navbar__mobile-inner">
+                        <div class="navbar__search">
+                            <button type="button" class="navbar__mobile-search-icon">
+                                <img src="images/navbar-search.svg" alt="">                     
+                            </button>
+                        </div>
+                        <div class="burger__body">
+                            <div class="burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="burger__list">
+                                <a href="#!" class="burger__logo"><img src="images/burger__logo.png" alt=""></a>
+                                <select name="" id="" class="navbar__select navbar__select-mobile">
+                                    <option value="0">Русский</option>
+                                    <option value="1">Узбекский</option>
+                                    <option value="2">Английский</option>
+                                </select>
+                                <a href="./indexMain.html" class="burger__link">Главная</a>
+                                <a href="./services.html" class="burger__link">Услуги</a>
+                                <a href="./works.html" class="burger__link">Портфолио</a>
+                                <a href="./about.html" class="burger__link">О нас</a>
+                                <a href="./contacts.html" class="burger__link">Контакты</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="site-visit">
+            <nav class="navbar">
+                <div class="navbar__search">
+                    <button type="button" class="navbar__search-icon">
+                        <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
+                        </svg>                        
+                    </button>
+                </div>
+                <div class="navbar__menu">
+                    <button type="button" class="navbar__menu-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3984 11.9996L15.9984 5.59961M22.3984 11.9996L15.9984 18.3996M22.3984 11.9996H2.39844" stroke="white"/>
+                        </svg>
+                    </button>
+                    <div class="navbar__menu-def">
+                        <div class="navbar__menu-def-language">
+                            <select name="" id="">
+                                <option value="0">Ru</option>
+                                <option value="1">Uz</option>
+                                <option value="2">En</option>
+                            </select>
+                        </div>
+                        <ul class="navbar__menu-def-list">
+                            <li>
+                                <a href="./indexMain.html">
+                                    <img src="images/navbar-icon-1.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./services.html">
+                                    <img src="images/navbar-2-active.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./works.html">
+                                    <img src="images/navbar-icon-3.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./about.html">
+                                    <img src="images/navbar-icon-4.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./contacts.html">
+                                    <img src="images/navbar-icon-5.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar__menu-full">
+                        <div class="navbar__menu-full-hero">
+                            <a href="#!" class="navbar__logo"><img src="images/navbar-logo.svg" alt=""></a>
+                            <select name="" id="" class="navbar__select">
+                                <option value="0">Русский</option>
+                                <option value="1">Узбекский</option>
+                                <option value="2">Английский</option>
+                            </select>
+                        </div>
+                        <div class="navbar__menu-full-inner">
+                            <ul class="navbar__menu-full-list">
+                                <li>
+                                    <a href="./indexMain.html">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="./services.html" class="active-icon">Услуги</a>
+                                </li>
+                                <li>
+                                    <a href="./works.html">Портфолио</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="./contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                            <div class="navbar__menu-full-social">
+                                <a href="#!"><img src="images/navbar-inst.png" alt=""></a>
+                                <a href="#!"><img src="images/navbar-facebook.png" alt=""></a>
+                                <a href="#!"><img src="images/navbar-youtube.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="site-visit__content">
+                    <div class="site-visit__content-atribute">
+                        <span>Заказать дизайн - Сайт визитка - Создать - Создать сайт с нуля</span>
+                    </div>
+                    <div class="site-visit__content-inner">
+                        <a href="./services.html" class="site-visit__content-inner-btn-back"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.33398 9.99984L6.66732 4.6665M1.33398 9.99984L6.66732 15.3332M1.33398 9.99984H18.0007"/>
+                            </svg>                            
+                            </a>
+                        <h2 class="subtitle">Начало создания <span>сайта с нуля</span></h2>
+                        <p class="subtitle-small">Выберите пункты которые вам нужны</p>
+                        <div class="site-visit__content-hero">
+                            <div class="site-visit__content-hero-col site-visit__content-hero-col-checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" class="custom-checkbox__item" id="checkbox-1">
+                                    <span>Дизайн</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" class="custom-checkbox__item" id="checkbox-2">
+                                    <span>Одностраничный</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" class="custom-checkbox__item" id="checkbox-3">
+                                    <span>Многостраничный</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" class="custom-checkbox__item" id="checkbox-4">
+                                    <span>Frontend Разработка </span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" class="custom-checkbox__item" id="checkbox-5">
+                                    <span>Админ панель</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" class="custom-checkbox__item" id="checkbox-6">
+                                    <span>Телеграм бот</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" class="custom-checkbox__item" id="checkbox-7">
+                                    <span>Приложение</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" class="custom-checkbox__item" id="checkbox-8">
+                                    <span>Логотип</span>
+                                </label>
+                            </div>
+                            <div class="site-visit__content-hero-col site-visit__content-hero-col-total">
+                                <span class="site-visit__content-hero-col-total-title">Выбранные пункты</span>
+                                <div class="site-visit__content-hero-col-total-list">
+                                    <div class="site-visit__content-hero-col-total-list-choose">
+                                        <div class="site-visit__content-hero-col-total-list-item" id="checkbox-choose-1">
+                                            <span>Дизайн</span>
+                                        </div>
+                                        <div class="site-visit__content-hero-col-total-list-item" id="checkbox-choose-2">
+                                            <span>Одностраничный</span>
+                                        </div>
+                                        <div class="site-visit__content-hero-col-total-list-item" id="checkbox-choose-3">
+                                            <span>Многостраничный</span>
+                                        </div>
+                                        <div class="site-visit__content-hero-col-total-list-item" id="checkbox-choose-4">
+                                            <span>Frontend Разработка</span>
+                                        </div>
+                                        <div class="site-visit__content-hero-col-total-list-item" id="checkbox-choose-5">
+                                            <span>Админ панель</span>
+                                        </div>
+                                        <div class="site-visit__content-hero-col-total-list-item" id="checkbox-choose-6">
+                                            <span>Телеграм бот</span>
+                                        </div>
+                                        <div class="site-visit__content-hero-col-total-list-item" id="checkbox-choose-7">
+                                            <span>Приложение</span>
+                                        </div>
+                                        <div class="site-visit__content-hero-col-total-list-item" id="checkbox-choose-8">
+                                            <span>Логотип</span>
+                                        </div>
+                                    </div>
+                                    <a href="#!" class="site-visit__content-hero-col-total-btn hover1">Продолжить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-col">
+                    <a href="#!" class="footer-logo"><img src="images/footer-logo.svg" alt=""></a>
+                    <select name="" id="" class="footer-select">
+                        <option value="0" class="footer-select-opt">Русский</option>
+                        <option value="1" class="footer-select-opt">Узбекский</option>
+                        <option value="2" class="footer-select-opt">Английский</option>
+                    </select>
+                </div>
+                <div class="footer-content-hero">
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">Навигация</span>
+                        <a href="./indexMain.html" class="footer-content-link">Главная</a>
+                        <a href="./services.html" class="footer-content-link">Заказать дизайн</a>
+                        <a href="./works.html" class="footer-content-link">Портфолио</a>
+                        <a href="./about.html" class="footer-content-link">О нас</a>
+                        <a href="./contacts.html" class="footer-content-link">Контакты</a>
+                    </div>
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">Наши контакты</span>
+                        <div class="footer-content-social-links">
+                            <span class="footer-content-social-links-title">Telegram :</span>
+                            <div>
+                                <a href="#!">@IVCS_Design</a>
+                                <a href="#!">@IVCS_Axe</a>
+                                <a href="#!">@IVCS_Michael</a>
+                            </div>
+                        </div>
+                        <div class="footer-content-social-links">
+                            <span class="footer-content-social-links-title">Instagram :</span>
+                            <div>
+                                <a href="#!">@axefreman</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content-col">
+                        <span class="footer-content-title">о IVCS</span>
+                        <p class="footer-content-about">Всё, что мы делаем – мы делаем ради развития вашего бизнеса.</p>
+                    </div>
+                </div>
+                <div class="footer-content-col footer-content-social">
+                    <span class="footer-content-title">Наши контакты</span>
+                    <div>
+                        <a href="#!"><img src="images/footer-inst.png" alt=""></a>
+                        <a href="#!"><img src="images/footer-facebook.png" alt=""></a>
+                        <a href="#!"><img src="images/footer-youtube.png" alt=""></a>
+                    </div>
+                    <p class="footer-content-copyright">IVCS 2022 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const body = document.querySelector('body')
+        const navbar = document.querySelector('.navbar__menu')
+        const navbarBtn = document.querySelector('.navbar__menu-btn')
+        const navbarSearch = document.querySelector('.navbar__search-icon')
+        const navbarMobileSearch = document.querySelector('.navbar__mobile-search-icon')
+        const navbarModal = document.querySelector('.navbar__modal')
+        const navbarModalBg = document.querySelector('.navbar__modal-bg')
+        navbarBtn.addEventListener('click',function(){
+            navbar.classList.toggle('active')
+        })
+        
+        navbarSearch.addEventListener('click',function(){
+            navbarModal.classList.add('active')
+        })
+
+        navbarMobileSearch.addEventListener('click',function(){
+            navbarModal.classList.add('active')
+        })
+
+        navbarModalBg.addEventListener('click',function(){
+            navbarModal.classList.remove('active')
+        })
+
+        const burgerBody = document.querySelector('.navbar__mobile')
+        const burgerMenu = document.querySelector('.burger__icon')
+        burgerMenu.addEventListener('click',function(){
+            burgerBody.classList.toggle('active')
+            body.classList.toggle('lock')
+        })
+
+        // =============================================
+
+        var checkBoxBtn1 = document.getElementById('checkbox-1'),
+            checkBoxBtn2 = document.getElementById('checkbox-2'),
+            checkBoxBtn3 = document.getElementById('checkbox-3'),
+            checkBoxBtn4 = document.getElementById('checkbox-4'),
+            checkBoxBtn5 = document.getElementById('checkbox-5'),
+            checkBoxBtn6 = document.getElementById('checkbox-6'),
+            checkBoxBtn7 = document.getElementById('checkbox-7'),
+            checkBoxBtn8 = document.getElementById('checkbox-8'),
+            checkBoxChoose1 = document.getElementById('checkbox-choose-1'),
+            checkBoxChoose2 = document.getElementById('checkbox-choose-2'),
+            checkBoxChoose3 = document.getElementById('checkbox-choose-3'),
+            checkBoxChoose4 = document.getElementById('checkbox-choose-4'),
+            checkBoxChoose5 = document.getElementById('checkbox-choose-5'),
+            checkBoxChoose6 = document.getElementById('checkbox-choose-6'),
+            checkBoxChoose7 = document.getElementById('checkbox-choose-7'),
+            checkBoxChoose8 = document.getElementById('checkbox-choose-8');
+
+        checkBoxBtn1.addEventListener('click',function(){
+            if(checkBoxBtn1.checked) {
+                checkBoxChoose1.classList.add('active')
+            } else {
+                checkBoxChoose1.classList.remove('active')
+            }
+        })
+
+        checkBoxBtn2.addEventListener('click',function(){
+            if(checkBoxBtn2.checked) {
+                checkBoxChoose2.classList.add('active')
+            } else {
+                checkBoxChoose2.classList.remove('active')
+            }
+        })
+
+        checkBoxBtn3.addEventListener('click',function(){
+            if(checkBoxBtn3.checked) {
+                checkBoxChoose3.classList.add('active')
+            } else {
+                checkBoxChoose3.classList.remove('active')
+            }
+        })
+
+        checkBoxBtn4.addEventListener('click',function(){
+            if(checkBoxBtn4.checked) {
+                checkBoxChoose4.classList.add('active')
+            } else {
+                checkBoxChoose4.classList.remove('active')
+            }
+        })
+
+        checkBoxBtn5.addEventListener('click',function(){
+            if(checkBoxBtn5.checked) {
+                checkBoxChoose5.classList.add('active')
+            } else {
+                checkBoxChoose5.classList.remove('active')
+            }
+        })
+
+        checkBoxBtn6.addEventListener('click',function(){
+            if(checkBoxBtn6.checked) {
+                checkBoxChoose6.classList.add('active')
+            } else {
+                checkBoxChoose6.classList.remove('active')
+            }
+        })
+
+        checkBoxBtn7.addEventListener('click',function(){
+            if(checkBoxBtn7.checked) {
+                checkBoxChoose7.classList.add('active')
+            } else {
+                checkBoxChoose7.classList.remove('active')
+            }
+        })
+
+        checkBoxBtn8.addEventListener('click',function(){
+            if(checkBoxBtn8.checked) {
+                checkBoxChoose8.classList.add('active')
+            } else {
+                checkBoxChoose8.classList.remove('active')
+            }
+        })
+    </script>
+    <script src="./app/preloader.js"></script>
+</body>
+</html>
