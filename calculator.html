@@ -229,6 +229,9 @@
             /* -webkit-appearance: none; 
             appearance: none; */
         }
+        .calculator__form-item-input:active{
+            background: #F4C42B !important;
+        }
         /* .calculator__form-item-input::-webkit-slider-thumb {
             -webkit-appearance: none; 
             appearance: none;
@@ -546,9 +549,9 @@
         })
         var range = document.querySelector('.calculator__form-item-input');
 
-        range.addEventListener("input", () => {
-            bubble.innerHTML = rangel.value;
-        });
+        // range.addEventListener("change", () => {
+        //     bubble.innerHTML = rangel.value;
+        // });
     </script>
     <script src="./app/preloader.js"></script>
 </body>
