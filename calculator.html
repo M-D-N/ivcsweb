@@ -227,6 +227,7 @@
         .calculator__form-item.choice-1 .calc__btn-1-1 {
             background-color: #F4C42B;
         }
+<<<<<<< HEAD
 
         .calculator__form-item.choice-2 .calculator__range-line::before {
             width: 49%;
@@ -238,11 +239,28 @@
 
         .calculator__form-item.choice-3 .calculator__range-line::before {
             width: 100%;
+=======
+        .range-wrap{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1 !important;
+        }
+        .calculator__form-item-input{
+            width: 100%;
+            -webkit-appearance: none; 
+            appearance: none;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 5px;
+            z-index: 3 !important;
+>>>>>>> ac6ad6cf00a620aa6590cc4fdd04ae601bec7257
         }
 
         .calculator__form-item.choice-3 .calc__btn-1-3 {
             background-color: #F4C42B;
         }
+<<<<<<< HEAD
 
         /* 2 */
         .calculator__form-item.choice-1 .calc__btn-2-1 {
@@ -254,6 +272,22 @@
         }
 
         .calculator__form-item.choice-2 .calc__btn-2-2 {
+=======
+        
+        input[type='range']::-webkit-slider-thumb {
+            width: 10px;
+            -webkit-appearance: none;
+            height: 10px;
+            cursor: progress;
+            background: #F4C42B;
+            box-shadow: -400px 0 0 400px #F4C42B;
+            z-index: 3 !important;
+        }
+        input[type="range"]::-moz-range-progress {
+            background-color: #F4C42B; 
+        }
+        input[type="range"]::-moz-range-track {  
+>>>>>>> ac6ad6cf00a620aa6590cc4fdd04ae601bec7257
             background-color: #F4C42B;
         }
 
@@ -264,6 +298,7 @@
         .calculator__form-item.choice-3 .calc__btn-2-3 {
             background-color: #F4C42B;
         }
+<<<<<<< HEAD
 
         /* 3 */
         .calculator__form-item.choice-1 .calc__btn-3-1 {
@@ -399,6 +434,19 @@
             height: 5px;
             background-color: #F4C42B;
             border-radius: 50px;
+=======
+        .output-1,
+        .output-2,
+        .output-3{
+            position: absolute;
+            background-color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 3px;
+            z-index: 2 !important;
+            cursor: pointer;
+>>>>>>> ac6ad6cf00a620aa6590cc4fdd04ae601bec7257
         }
 
         .calculator__range-item {
