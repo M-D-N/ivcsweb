@@ -453,6 +453,12 @@
             outline: none;
             cursor: pointer;
         }
+
+        .calculator__total {
+            font-size: 36px;
+            color: white;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
@@ -755,6 +761,7 @@
                                 </div>
                             </div>
                             <button class="calculator__btn" type="button">Рассчитать</button>
+                            <span class="calculator__total">0</span>
                         </div>
                     </div>
                 </div>
@@ -1076,11 +1083,13 @@
         // total
 
         var totalBtn = document.querySelector('.calculator__btn');
+        var totalSumm = document.querySelector('.calculator__total')
 
         
         totalBtn.addEventListener('click',function(){
             var total = total1 + total2 + total3 + total4 + total5 + total6 + total7;
             console.log(total);
+            totalSumm.innerHTML = total;
         })
     </script>
     <script src="./app/preloader.js"></script>
