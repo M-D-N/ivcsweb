@@ -74,6 +74,7 @@
             flex-direction: column;
             align-items: center;
             padding-top: 100px;
+            padding-bottom: 70px;
             height: 100vh;
             overflow-y: scroll;
         }
@@ -207,7 +208,7 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            row-gap: 50px;
+            row-gap: 60px;
         }
 
         .calculator__form-item {
@@ -218,70 +219,239 @@
             position: relative;
         }
 
+        /* 1 */
+        .calculator__form-item.choice-1 .calculator__range-line::before {
+            width: 24%;
+        }
+
+        .calculator__form-item.choice-1 .calc__btn-1-1 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-2 .calculator__range-line::before {
+            width: 49%;
+        }
+
+        .calculator__form-item.choice-2 .calc__btn-1-2 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-3 .calculator__range-line::before {
+            width: 100%;
+        }
+
+        .calculator__form-item.choice-3 .calc__btn-1-3 {
+            background-color: #F4C42B;
+        }
+
+        /* 2 */
+        .calculator__form-item.choice-1 .calc__btn-2-1 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-2 .calculator__range-line::before {
+            width: 49%;
+        }
+
+        .calculator__form-item.choice-2 .calc__btn-2-2 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-3 .calculator__range-line::before {
+            width: 100%;
+        }
+
+        .calculator__form-item.choice-3 .calc__btn-2-3 {
+            background-color: #F4C42B;
+        }
+
+        /* 3 */
+        .calculator__form-item.choice-1 .calc__btn-3-1 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-2 .calculator__range-line::before {
+            width: 49%;
+        }
+
+        .calculator__form-item.choice-2 .calc__btn-3-2 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-3 .calculator__range-line::before {
+            width: 100%;
+        }
+
+        .calculator__form-item.choice-3 .calc__btn-3-3 {
+            background-color: #F4C42B;
+        }
+
+        /* 4 */
+        .calculator__form-item.choice-1 .calc__btn-4-1 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-2 .calculator__range-line::before {
+            width: 49%;
+        }
+
+        .calculator__form-item.choice-2 .calc__btn-4-2 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-3 .calculator__range-line::before {
+            width: 100%;
+        }
+
+        .calculator__form-item.choice-3 .calc__btn-4-3 {
+            background-color: #F4C42B;
+        }
+
+        /* 5 */
+        .calculator__form-item.choice-1 .calc__btn-5-1 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-2 .calculator__range-line::before {
+            width: 49%;
+        }
+
+        .calculator__form-item.choice-2 .calc__btn-5-2 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-3 .calculator__range-line::before {
+            width: 100%;
+        }
+
+        .calculator__form-item.choice-3 .calc__btn-5-3 {
+            background-color: #F4C42B;
+        }
+
+        /* 6 */
+        .calculator__form-item.choice-1 .calc__btn-6-1 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-2 .calculator__range-line::before {
+            width: 49%;
+        }
+
+        .calculator__form-item.choice-2 .calc__btn-6-2 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-3 .calculator__range-line::before {
+            width: 100%;
+        }
+
+        .calculator__form-item.choice-3 .calc__btn-6-3 {
+            background-color: #F4C42B;
+        }
+
+        /* 7 */
+        .calculator__form-item.choice-1 .calc__btn-7-1 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-2 .calculator__range-line::before {
+            width: 49%;
+        }
+
+        .calculator__form-item.choice-2 .calc__btn-7-2 {
+            background-color: #F4C42B;
+        }
+
+        .calculator__form-item.choice-3 .calculator__range-line::before {
+            width: 100%;
+        }
+
+        .calculator__form-item.choice-3 .calc__btn-7-3 {
+            background-color: #F4C42B;
+        }
+
+        /* all */
         .calculator__form-item-title {
             font-weight: 600;
             color: #fff;
             font-size: 22px;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
-        .calculator__form-item-input{
+
+        .calculator__range {
             width: 100%;
-            -webkit-appearance: none; 
-            appearance: none;
-            overflow: hidden;
-            border-radius: 10px;
-            height: 5px;
-        }
-        input[type='range']::-webkit-slider-runnable-track {
-            height: 10px;
-            -webkit-appearance: none;
-            color: #F4C42B;
-            margin-top: -1px;
-        }
-        
-        input[type='range']::-webkit-slider-thumb {
-            width: 10px;
-            -webkit-appearance: none;
-            height: 10px;
-            cursor: progress;
-            background: #434343;
-            box-shadow: -400px 0 0 400px #F4C42B;
-        }
-        input[type="range"]::-moz-range-progress {
-            background-color: #F4C42B; 
-        }
-        input[type="range"]::-moz-range-track {  
-            background-color: #F4C42B;
-        }
-        input[type="range"]::-ms-fill-lower {
-            background-color: #F4C42B; 
-        }
-        input[type="range"]::-ms-fill-upper {  
-            background-color: #F4C42B;
-        }
-        .range-wrap{
             position: relative;
-            width: 100%;
-            height: 100%;
         }
-        .output-1,
-        .output-2,
-        .output-3{
-            position: absolute;
+
+        .calculator__range-line {
+            width: 100%;
+            height: 5px;
+            position: relative;
             background-color: #fff;
+            border-radius: 50px;
+        }
+
+        .calculator__range-line::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 0%;
+            height: 5px;
+            background-color: #F4C42B;
+            border-radius: 50px;
+        }
+
+        .calculator__range-item {
+            position: absolute;
+            top: -38.5px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            align-items: center;
+            width: 130px;
+        }
+
+        .calculator__range-item-1 {
+            left: 16%;
+        }
+
+        .calculator__range-item-2 {
+            left: 40%;
+        }
+
+        .calculator__range-item-3 {
+            left: 65%;
+        }
+
+        .calculator__range-item span {
+            color: white;
+            font-size: 18px;
+        }
+
+        .calculator__range-item button {
             width: 20px;
             height: 20px;
-            border-radius: 50%;
-            top: 3px;
+            border-radius: 50px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
         }
-        .output-1{
-            left: 24%;
-        }
-        .output-2{
-            left: 49%;
-        }
-        .output-3{
-            left: 73%;
+
+        .calculator__btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 22px;
+            border-radius: 10px;
+            font-size: 22px;
+            background-color: #F4C42B;
+            max-width: 376px;
+            transition: 0.3s;
+            border: none;
+            outline: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -451,17 +621,141 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="" class="calculator__form">
-                            <div class="calculator__form-item">
+                        <div class="calculator__form">
+                            <div class="calculator__form-item calculator__form-item-1">
                                 <h5 class="calculator__form-item-title">Кол-во страниц</h5>
-                                <div class="range-wrap">
-                                    <input type="range" class="calculator__form-item-input" min="20" max="100" step="20">
-                                    <output class="output-1"></output>
-                                    <output class="output-2"></output>
-                                    <output class="output-3"></output>                                    
+                                <div class="calculator__range">
+                                    <div class="calculator__range-line"></div>
+                                    <div class="calculator__range-item calculator__range-item-1">
+                                        <span>3-5</span>
+                                        <button type="button" class="calc__btn-1-1"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-2">
+                                        <span>6-10</span>
+                                        <button type="button" class="calc__btn-1-2"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-3">
+                                        <span>10+</span>
+                                        <button type="button" class="calc__btn-1-3"></button>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
+
+                            <div class="calculator__form-item calculator__form-item-2">
+                                <h5 class="calculator__form-item-title">Уровень дизайна</h5>
+                                <div class="calculator__range">
+                                    <div class="calculator__range-line"></div>
+                                    <div class="calculator__range-item calculator__range-item-1">
+                                        <span>Простой</span>
+                                        <button type="button" class="calc__btn-2-1"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-2">
+                                        <span>Высокий</span>
+                                        <button type="button" class="calc__btn-2-2"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-3">
+                                        <span>Особый</span>
+                                        <button type="button" class="calc__btn-2-3"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calculator__form-item calculator__form-item-3">
+                                <h5 class="calculator__form-item-title">Адаптация сайта под устройства</h5>
+                                <div class="calculator__range">
+                                    <div class="calculator__range-line"></div>
+                                    <div class="calculator__range-item calculator__range-item-1">
+                                        <span>Не требуется</span>
+                                        <button type="button" class="calc__btn-3-1"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-2">
+                                        <span>Телефон</span>
+                                        <button type="button" class="calc__btn-3-2"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-3">
+                                        <span>Планшет</span>
+                                        <button type="button" class="calc__btn-3-3"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calculator__form-item calculator__form-item-4">
+                                <h5 class="calculator__form-item-title">Система управления сайтом</h5>
+                                <div class="calculator__range">
+                                    <div class="calculator__range-line"></div>
+                                    <div class="calculator__range-item calculator__range-item-1">
+                                        <span>Не требуется</span>
+                                        <button type="button" class="calc__btn-4-1"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-2">
+                                        <span>Стандартный</span>
+                                        <button type="button" class="calc__btn-4-2"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-3">
+                                        <span>Расширенный</span>
+                                        <button type="button" class="calc__btn-4-3"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calculator__form-item calculator__form-item-5">
+                                <h5 class="calculator__form-item-title">Количество языков</h5>
+                                <div class="calculator__range">
+                                    <div class="calculator__range-line"></div>
+                                    <div class="calculator__range-item calculator__range-item-1">
+                                        <span>1</span>
+                                        <button type="button" class="calc__btn-5-1"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-2">
+                                        <span>2</span>
+                                        <button type="button" class="calc__btn-5-2"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-3">
+                                        <span>3</span>
+                                        <button type="button" class="calc__btn-5-3"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calculator__form-item calculator__form-item-6">
+                                <h5 class="calculator__form-item-title">Количество языков</h5>
+                                <div class="calculator__range">
+                                    <div class="calculator__range-line"></div>
+                                    <div class="calculator__range-item calculator__range-item-1">
+                                        <span>1</span>
+                                        <button type="button" class="calc__btn-6-1"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-2">
+                                        <span>2</span>
+                                        <button type="button" class="calc__btn-6-2"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-3">
+                                        <span>3</span>
+                                        <button type="button" class="calc__btn-6-3"></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calculator__form-item calculator__form-item-7">
+                                <h5 class="calculator__form-item-title">Количество языков</h5>
+                                <div class="calculator__range">
+                                    <div class="calculator__range-line"></div>
+                                    <div class="calculator__range-item calculator__range-item-1">
+                                        <span>1</span>
+                                        <button type="button" class="calc__btn-7-1"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-2">
+                                        <span>2</span>
+                                        <button type="button" class="calc__btn-7-2"></button>
+                                    </div>
+                                    <div class="calculator__range-item calculator__range-item-3">
+                                        <span>3</span>
+                                        <button type="button" class="calc__btn-7-3"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="calculator__btn" type="button">Рассчитать</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -559,11 +853,235 @@
         calcDropdown.addEventListener('click',function(){
             calcDropdown.classList.toggle('active')
         })
-        var range = document.querySelector('.calculator__form-item-input');
 
-        // range.addEventListener("change", () => {
-        //     bubble.innerHTML = rangel.value;
-        // });
+        // calculator
+        var total1 = 0;
+        var total2 = 0;
+        var total3 = 0;
+        var total4 = 0;
+        var total5 = 0;
+        var total6 = 0;
+        var total7 = 0;
+
+        // 1
+        var calcItem1 = document.querySelector('.calculator__form-item-1'),
+            calcBtn1_1 = document.querySelector('.calc__btn-1-1'),
+            calcBtn1_2 = document.querySelector('.calc__btn-1-2'),
+            calcBtn1_3 = document.querySelector('.calc__btn-1-3');
+
+        calcBtn1_1.addEventListener('click',function(){
+            calcItem1.classList.add('choice-1')
+            calcItem1.classList.remove('choice-2')
+            calcItem1.classList.remove('choice-3')
+
+            total1 = 10
+        })
+
+        calcBtn1_2.addEventListener('click',function(){
+            calcItem1.classList.add('choice-1')
+            calcItem1.classList.add('choice-2')
+            calcItem1.classList.remove('choice-3')
+
+            total1 = 50
+        })
+
+        calcBtn1_3.addEventListener('click',function(){
+            calcItem1.classList.add('choice-1')
+            calcItem1.classList.add('choice-2')
+            calcItem1.classList.add('choice-3')
+
+            total1 = 100
+        })
+
+        // 2
+        var calcItem2 = document.querySelector('.calculator__form-item-2'),
+            calcBtn2_1 = document.querySelector('.calc__btn-2-1'),
+            calcBtn2_2 = document.querySelector('.calc__btn-2-2'),
+            calcBtn2_3 = document.querySelector('.calc__btn-2-3');
+
+        calcBtn2_1.addEventListener('click',function(){
+            calcItem2.classList.add('choice-1')
+            calcItem2.classList.remove('choice-2')
+            calcItem2.classList.remove('choice-3')
+
+            total2 = 20
+        })
+
+        calcBtn2_2.addEventListener('click',function(){
+            calcItem2.classList.add('choice-1')
+            calcItem2.classList.add('choice-2')
+            calcItem2.classList.remove('choice-3')
+
+            total2 = 30
+        })
+
+        calcBtn2_3.addEventListener('click',function(){
+            calcItem2.classList.add('choice-1')
+            calcItem2.classList.add('choice-2')
+            calcItem2.classList.add('choice-3')
+
+            total2 = 80
+        })
+
+        // 3
+        var calcItem3 = document.querySelector('.calculator__form-item-3'),
+            calcBtn3_1 = document.querySelector('.calc__btn-3-1'),
+            calcBtn3_2 = document.querySelector('.calc__btn-3-2'),
+            calcBtn3_3 = document.querySelector('.calc__btn-3-3');
+
+        calcBtn3_1.addEventListener('click',function(){
+            calcItem3.classList.add('choice-1')
+            calcItem3.classList.remove('choice-2')
+            calcItem3.classList.remove('choice-3')
+
+            total3 = 25
+        })
+
+        calcBtn3_2.addEventListener('click',function(){
+            calcItem3.classList.add('choice-1')
+            calcItem3.classList.add('choice-2')
+            calcItem3.classList.remove('choice-3')
+
+            total3 = 55
+        })
+
+        calcBtn3_3.addEventListener('click',function(){
+            calcItem3.classList.add('choice-1')
+            calcItem3.classList.add('choice-2')
+            calcItem3.classList.add('choice-3')
+
+            total3 = 75
+        })
+
+        // 4
+        var calcItem4 = document.querySelector('.calculator__form-item-4'),
+            calcBtn4_1 = document.querySelector('.calc__btn-4-1'),
+            calcBtn4_2 = document.querySelector('.calc__btn-4-2'),
+            calcBtn4_3 = document.querySelector('.calc__btn-4-3');
+
+        calcBtn4_1.addEventListener('click',function(){
+            calcItem4.classList.add('choice-1')
+            calcItem4.classList.remove('choice-2')
+            calcItem4.classList.remove('choice-3')
+
+            total4 = 25
+        })
+
+        calcBtn4_2.addEventListener('click',function(){
+            calcItem4.classList.add('choice-1')
+            calcItem4.classList.add('choice-2')
+            calcItem4.classList.remove('choice-3')
+
+            total4 = 55
+        })
+
+        calcBtn4_3.addEventListener('click',function(){
+            calcItem4.classList.add('choice-1')
+            calcItem4.classList.add('choice-2')
+            calcItem4.classList.add('choice-3')
+
+            total4 = 75
+        })
+
+        // 5
+        var calcItem5 = document.querySelector('.calculator__form-item-5'),
+            calcBtn5_1 = document.querySelector('.calc__btn-5-1'),
+            calcBtn5_2 = document.querySelector('.calc__btn-5-2'),
+            calcBtn5_3 = document.querySelector('.calc__btn-5-3');
+
+        calcBtn5_1.addEventListener('click',function(){
+            calcItem5.classList.add('choice-1')
+            calcItem5.classList.remove('choice-2')
+            calcItem5.classList.remove('choice-3')
+
+            total5 = 25
+        })
+
+        calcBtn5_2.addEventListener('click',function(){
+            calcItem5.classList.add('choice-1')
+            calcItem5.classList.add('choice-2')
+            calcItem5.classList.remove('choice-3')
+
+            total5 = 55
+        })
+
+        calcBtn5_3.addEventListener('click',function(){
+            calcItem5.classList.add('choice-1')
+            calcItem5.classList.add('choice-2')
+            calcItem5.classList.add('choice-3')
+
+            total5 = 75
+        })
+
+        // 6
+        var calcItem6 = document.querySelector('.calculator__form-item-6'),
+            calcBtn6_1 = document.querySelector('.calc__btn-6-1'),
+            calcBtn6_2 = document.querySelector('.calc__btn-6-2'),
+            calcBtn6_3 = document.querySelector('.calc__btn-6-3');
+
+        calcBtn6_1.addEventListener('click',function(){
+            calcItem6.classList.add('choice-1')
+            calcItem6.classList.remove('choice-2')
+            calcItem6.classList.remove('choice-3')
+
+            total6 = 25
+        })
+
+        calcBtn6_2.addEventListener('click',function(){
+            calcItem6.classList.add('choice-1')
+            calcItem6.classList.add('choice-2')
+            calcItem6.classList.remove('choice-3')
+
+            total6 = 55
+        })
+
+        calcBtn6_3.addEventListener('click',function(){
+            calcItem6.classList.add('choice-1')
+            calcItem6.classList.add('choice-2')
+            calcItem6.classList.add('choice-3')
+
+            total6 = 75
+        })
+
+        // 7
+        var calcItem7 = document.querySelector('.calculator__form-item-7'),
+            calcBtn7_1 = document.querySelector('.calc__btn-7-1'),
+            calcBtn7_2 = document.querySelector('.calc__btn-7-2'),
+            calcBtn7_3 = document.querySelector('.calc__btn-7-3');
+
+        calcBtn7_1.addEventListener('click',function(){
+            calcItem7.classList.add('choice-1')
+            calcItem7.classList.remove('choice-2')
+            calcItem7.classList.remove('choice-3')
+
+            total7 = 25
+        })
+
+        calcBtn7_2.addEventListener('click',function(){
+            calcItem7.classList.add('choice-1')
+            calcItem7.classList.add('choice-2')
+            calcItem7.classList.remove('choice-3')
+
+            total7 = 55
+        })
+
+        calcBtn7_3.addEventListener('click',function(){
+            calcItem7.classList.add('choice-1')
+            calcItem7.classList.add('choice-2')
+            calcItem7.classList.add('choice-3')
+
+            total7 = 75
+        })
+
+        // total
+
+        var totalBtn = document.querySelector('.calculator__btn')
+
+        var total = total1 + total2 + total3 + total4 + total5 + total6 + total7;
+
+        totalBtn.addEventListener('click',function(){
+            console.log(total + total1 + total2 + total3 + total4 + total5 + total6 + total7)
+        })
     </script>
     <script src="./app/preloader.js"></script>
 </body>
