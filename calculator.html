@@ -455,9 +455,143 @@
         }
 
         .calculator__total {
-            font-size: 36px;
-            color: white;
+            font-size: 48px;
+            color: #F4C42B;
             font-weight: 700;
+            margin: 40px 0;
+        }
+
+        .calculator__modal {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            row-gap: 80px;
+        }
+
+        .calculator__modal.active {
+            display: flex;
+        }
+
+        .calculator__modal-main {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 90px;
+        }
+
+        .calculator__modal-inner {
+            width: 100%;
+            max-width: 775px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calculator__modal-inner-title {
+            font-weight: 600;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .calculator__modal-img {
+            width: 100%;
+            max-width: 550px;
+            height: 550px;
+        }
+
+        .calculator__modal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .calculator__modal-list-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .calculator__modal-list-item::before {
+            content: '';
+            left: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50px;
+            background-color: #fff;
+            position: absolute;
+        }
+
+        .calculator__modal-list-name {
+            font-size: 24px;
+            color: white;
+        }
+
+        .calculator__modal-list-var {
+            font-size: 24px;
+            font-weight: 600;
+            color: #F4C42B;
+            display: none;
+        }
+
+        .calculator__modal-list {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+
+        .calculator__modal-list-type {
+            display: block;
+        }
+
+        .calculator__modal-list-var-0 {
+            display: block;
+        }
+        
+        .calculator__modal-list-var-0.active {
+            display: none !important;
+        }
+
+        .calculator__modal-list-var.active {
+            display: block;
+        }
+
+        .calculator__modal-btn {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 70px;
+        }
+
+        .calculator__modal-btn-item {
+            width: 49%;
+            padding: 12px;
+            border-radius: 10px;
+            background-color: #F4C42B;
+            color: black;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .hover1:hover{
+            box-shadow: 0 0 10px #F4C42B;
+        }
+
+        .hover2{
+            background: #fff;
+        }
+
+        .hover2:hover{
+            box-shadow: 0 0 10px #fff !important;
+            background: #fff !important;
         }
     </style>
 </head>
@@ -760,8 +894,80 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="calculator__btn" type="button">Рассчитать</button>
-                            <span class="calculator__total">0</span>
+                            <button class="calculator__btn hover1" type="button">Рассчитать</button>
+                        </div>
+                    </div>
+
+                    <div class="calculator__modal">
+                        <h2 class="subtitle">ЕСЛИ ОСТАЛИСЬ КАКИЕ-ТО ВОПРОСЫ , <span>НАПИШИТЕ</span> ИЛИ <span>ПОЗВОНИТЕ</span> НАМ</h2>
+                        <div class="calculator__modal-main">
+                            <div class="calculator__modal-inner">
+                                <span class="calculator__modal-inner-title">Примерная стоимоть вашего сайта</span>
+                                <span class="calculator__total">0</span>
+                                <span class="calculator__modal-inner-title">Список услуг который вы выбрали</span>
+                                <div class="calculator__modal-list">
+                                    <div class="calculator__modal-list-item">
+                                        <span class="calculator__modal-list-name">Вид сайта -</span>
+                                        <span class="calculator__modal-list-type calculator__modal-list-var">Визитка</span>
+                                    </div>
+                                    <div class="calculator__modal-list-item">
+                                        <span class="calculator__modal-list-name">Кол-во стр -</span>
+                                        <span class="calculator__modal-list-var-1-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
+                                        <span class="calculator__modal-list-var-1-1 calculator__modal-list-var">3-5</span>
+                                        <span class="calculator__modal-list-var-1-2 calculator__modal-list-var">5-8</span>
+                                        <span class="calculator__modal-list-var-1-3 calculator__modal-list-var">10+</span>
+                                    </div>
+                                    <div class="calculator__modal-list-item">
+                                        <span class="calculator__modal-list-name">Уровень дизайна -</span>
+                                        <span class="calculator__modal-list-var-2-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
+                                        <span class="calculator__modal-list-var-2-1 calculator__modal-list-var">Норм</span>
+                                        <span class="calculator__modal-list-var-2-2 calculator__modal-list-var">неплокс</span>
+                                        <span class="calculator__modal-list-var-2-3 calculator__modal-list-var">Ок</span>
+                                    </div>
+                                    <div class="calculator__modal-list-item">
+                                        <span class="calculator__modal-list-name">Адаптация сайта -</span>
+                                        <span class="calculator__modal-list-var-3-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
+                                        <span class="calculator__modal-list-var-3-1 calculator__modal-list-var">Телефон</span>
+                                        <span class="calculator__modal-list-var-3-2 calculator__modal-list-var">Телефон 1</span>
+                                        <span class="calculator__modal-list-var-3-3 calculator__modal-list-var">Телефон 2</span>
+                                    </div>
+                                    <div class="calculator__modal-list-item">
+                                        <span class="calculator__modal-list-name">Система управления сайта -</span>
+                                        <span class="calculator__modal-list-var-4-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
+                                        <span class="calculator__modal-list-var-4-1 calculator__modal-list-var">1</span>
+                                        <span class="calculator__modal-list-var-4-2 calculator__modal-list-var">2</span>
+                                        <span class="calculator__modal-list-var-4-3 calculator__modal-list-var">3</span>
+                                    </div>
+                                    <div class="calculator__modal-list-item">
+                                        <span class="calculator__modal-list-name">Количество языков -</span>
+                                        <span class="calculator__modal-list-var-5-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
+                                        <span class="calculator__modal-list-var-5-1 calculator__modal-list-var">1</span>
+                                        <span class="calculator__modal-list-var-5-2 calculator__modal-list-var">2</span>
+                                        <span class="calculator__modal-list-var-5-3 calculator__modal-list-var">3</span>
+                                    </div>
+                                    <div class="calculator__modal-list-item">
+                                        <span class="calculator__modal-list-name">SEO услуга -</span>
+                                        <span class="calculator__modal-list-var-6-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
+                                        <span class="calculator__modal-list-var-6-1 calculator__modal-list-var">1</span>
+                                        <span class="calculator__modal-list-var-6-2 calculator__modal-list-var">2</span>
+                                        <span class="calculator__modal-list-var-6-3 calculator__modal-list-var">3</span>
+                                    </div>
+                                    <div class="calculator__modal-list-item">
+                                        <span class="calculator__modal-list-name">SEO услуга -</span>
+                                        <span class="calculator__modal-list-var-7-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
+                                        <span class="calculator__modal-list-var-7-1 calculator__modal-list-var">1</span>
+                                        <span class="calculator__modal-list-var-7-2 calculator__modal-list-var">2</span>
+                                        <span class="calculator__modal-list-var-7-3 calculator__modal-list-var">3</span>
+                                    </div>
+                                </div>
+                                <div class="calculator__modal-btn">
+                                    <a href="#!" class="calculator__modal-btn-item hover1">Контакты</a>
+                                    <a href="#!" class="calculator__modal-btn-item hover2">Главная</a>
+                                </div>
+                            </div>
+                            <div class="calculator__modal-img">
+                                <img src="images/72178-man-working-under-lamp-light.gif" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -870,6 +1076,50 @@
         var total6 = 0;
         var total7 = 0;
 
+        // var
+
+        // 1
+        var calcVar1_0 = document.querySelector('.calculator__modal-list-var-1-0')
+        var calcVar1_1 = document.querySelector('.calculator__modal-list-var-1-1')
+        var calcVar1_2 = document.querySelector('.calculator__modal-list-var-1-2')
+        var calcVar1_3 = document.querySelector('.calculator__modal-list-var-1-3')
+
+        // 2
+        var calcVar2_0 = document.querySelector('.calculator__modal-list-var-2-0')
+        var calcVar2_1 = document.querySelector('.calculator__modal-list-var-2-1')
+        var calcVar2_2 = document.querySelector('.calculator__modal-list-var-2-2')
+        var calcVar2_3 = document.querySelector('.calculator__modal-list-var-2-3')
+
+        // 3
+        var calcVar3_0 = document.querySelector('.calculator__modal-list-var-3-0')
+        var calcVar3_1 = document.querySelector('.calculator__modal-list-var-3-1')
+        var calcVar3_2 = document.querySelector('.calculator__modal-list-var-3-2')
+        var calcVar3_3 = document.querySelector('.calculator__modal-list-var-3-3')
+
+        // 4
+        var calcVar4_0 = document.querySelector('.calculator__modal-list-var-4-0')
+        var calcVar4_1 = document.querySelector('.calculator__modal-list-var-4-1')
+        var calcVar4_2 = document.querySelector('.calculator__modal-list-var-4-2')
+        var calcVar4_3 = document.querySelector('.calculator__modal-list-var-4-3')
+
+        // 5
+        var calcVar5_0 = document.querySelector('.calculator__modal-list-var-5-0')
+        var calcVar5_1 = document.querySelector('.calculator__modal-list-var-5-1')
+        var calcVar5_2 = document.querySelector('.calculator__modal-list-var-5-2')
+        var calcVar5_3 = document.querySelector('.calculator__modal-list-var-5-3')
+
+        // 6
+        var calcVar6_0 = document.querySelector('.calculator__modal-list-var-6-0')
+        var calcVar6_1 = document.querySelector('.calculator__modal-list-var-6-1')
+        var calcVar6_2 = document.querySelector('.calculator__modal-list-var-6-2')
+        var calcVar6_3 = document.querySelector('.calculator__modal-list-var-6-3')
+
+        // 7
+        var calcVar7_0 = document.querySelector('.calculator__modal-list-var-7-0')
+        var calcVar7_1 = document.querySelector('.calculator__modal-list-var-7-1')
+        var calcVar7_2 = document.querySelector('.calculator__modal-list-var-7-2')
+        var calcVar7_3 = document.querySelector('.calculator__modal-list-var-7-3')
+
         // 1
         var calcItem1 = document.querySelector('.calculator__form-item-1'),
             calcBtn1_1 = document.querySelector('.calc__btn-1-1'),
@@ -881,6 +1131,11 @@
             calcItem1.classList.remove('choice-2')
             calcItem1.classList.remove('choice-3')
 
+            calcVar1_0.classList.add('active')
+            calcVar1_1.classList.add('active')
+            calcVar1_2.classList.remove('active')
+            calcVar1_3.classList.remove('active')
+
             total1 = 10
         })
 
@@ -889,6 +1144,11 @@
             calcItem1.classList.add('choice-2')
             calcItem1.classList.remove('choice-3')
 
+            calcVar1_0.classList.add('active')
+            calcVar1_1.classList.remove('active')
+            calcVar1_2.classList.add('active')
+            calcVar1_3.classList.remove('active')
+
             total1 = 50
         })
 
@@ -896,6 +1156,11 @@
             calcItem1.classList.add('choice-1')
             calcItem1.classList.add('choice-2')
             calcItem1.classList.add('choice-3')
+
+            calcVar1_0.classList.add('active')
+            calcVar1_1.classList.remove('active')
+            calcVar1_2.classList.remove('active')
+            calcVar1_3.classList.add('active')
 
             total1 = 100
         })
@@ -911,6 +1176,11 @@
             calcItem2.classList.remove('choice-2')
             calcItem2.classList.remove('choice-3')
 
+            calcVar2_0.classList.add('active')
+            calcVar2_1.classList.add('active')
+            calcVar2_2.classList.remove('active')
+            calcVar2_3.classList.remove('active')
+
             total2 = 20
         })
 
@@ -919,6 +1189,11 @@
             calcItem2.classList.add('choice-2')
             calcItem2.classList.remove('choice-3')
 
+            calcVar2_0.classList.add('active')
+            calcVar2_1.classList.remove('active')
+            calcVar2_2.classList.add('active')
+            calcVar2_3.classList.remove('active')
+
             total2 = 30
         })
 
@@ -926,6 +1201,11 @@
             calcItem2.classList.add('choice-1')
             calcItem2.classList.add('choice-2')
             calcItem2.classList.add('choice-3')
+
+            calcVar2_0.classList.add('active')
+            calcVar2_1.classList.remove('active')
+            calcVar2_2.classList.remove('active')
+            calcVar2_3.classList.add('active')
 
             total2 = 80
         })
@@ -941,6 +1221,11 @@
             calcItem3.classList.remove('choice-2')
             calcItem3.classList.remove('choice-3')
 
+            calcVar3_0.classList.add('active')
+            calcVar3_1.classList.add('active')
+            calcVar3_2.classList.remove('active')
+            calcVar3_3.classList.remove('active')
+
             total3 = 25
         })
 
@@ -949,6 +1234,11 @@
             calcItem3.classList.add('choice-2')
             calcItem3.classList.remove('choice-3')
 
+            calcVar3_0.classList.add('active')
+            calcVar3_1.classList.remove('active')
+            calcVar3_2.classList.add('active')
+            calcVar3_3.classList.remove('active')
+
             total3 = 55
         })
 
@@ -956,6 +1246,11 @@
             calcItem3.classList.add('choice-1')
             calcItem3.classList.add('choice-2')
             calcItem3.classList.add('choice-3')
+
+            calcVar3_0.classList.add('active')
+            calcVar3_1.classList.remove('active')
+            calcVar3_2.classList.remove('active')
+            calcVar3_3.classList.add('active')
 
             total3 = 75
         })
@@ -971,6 +1266,11 @@
             calcItem4.classList.remove('choice-2')
             calcItem4.classList.remove('choice-3')
 
+            calcVar4_0.classList.add('active')
+            calcVar4_1.classList.add('active')
+            calcVar4_2.classList.remove('active')
+            calcVar4_3.classList.remove('active')
+
             total4 = 25
         })
 
@@ -979,6 +1279,11 @@
             calcItem4.classList.add('choice-2')
             calcItem4.classList.remove('choice-3')
 
+            calcVar4_0.classList.add('active')
+            calcVar4_1.classList.remove('active')
+            calcVar4_2.classList.add('active')
+            calcVar4_3.classList.remove('active')
+
             total4 = 55
         })
 
@@ -986,6 +1291,11 @@
             calcItem4.classList.add('choice-1')
             calcItem4.classList.add('choice-2')
             calcItem4.classList.add('choice-3')
+
+            calcVar4_0.classList.add('active')
+            calcVar4_1.classList.remove('active')
+            calcVar4_2.classList.remove('active')
+            calcVar4_3.classList.add('active')
 
             total4 = 75
         })
@@ -1000,6 +1310,11 @@
             calcItem5.classList.add('choice-1')
             calcItem5.classList.remove('choice-2')
             calcItem5.classList.remove('choice-3')
+            
+            calcVar5_0.classList.add('active')
+            calcVar5_1.classList.add('active')
+            calcVar5_2.classList.remove('active')
+            calcVar5_3.classList.remove('active')
 
             total5 = 25
         })
@@ -1009,6 +1324,11 @@
             calcItem5.classList.add('choice-2')
             calcItem5.classList.remove('choice-3')
 
+            calcVar5_0.classList.add('active')
+            calcVar5_1.classList.remove('active')
+            calcVar5_2.classList.add('active')
+            calcVar5_3.classList.remove('active')
+
             total5 = 55
         })
 
@@ -1016,6 +1336,11 @@
             calcItem5.classList.add('choice-1')
             calcItem5.classList.add('choice-2')
             calcItem5.classList.add('choice-3')
+
+            calcVar5_0.classList.add('active')
+            calcVar5_1.classList.remove('active')
+            calcVar5_2.classList.remove('active')
+            calcVar5_3.classList.add('active')
 
             total5 = 75
         })
@@ -1031,6 +1356,11 @@
             calcItem6.classList.remove('choice-2')
             calcItem6.classList.remove('choice-3')
 
+            calcVar6_0.classList.add('active')
+            calcVar6_1.classList.add('active')
+            calcVar6_2.classList.remove('active')
+            calcVar6_3.classList.remove('active')
+
             total6 = 25
         })
 
@@ -1039,6 +1369,11 @@
             calcItem6.classList.add('choice-2')
             calcItem6.classList.remove('choice-3')
 
+            calcVar6_0.classList.add('active')
+            calcVar6_1.classList.remove('active')
+            calcVar6_2.classList.add('active')
+            calcVar6_3.classList.remove('active')
+
             total6 = 55
         })
 
@@ -1046,6 +1381,11 @@
             calcItem6.classList.add('choice-1')
             calcItem6.classList.add('choice-2')
             calcItem6.classList.add('choice-3')
+
+            calcVar6_0.classList.add('active')
+            calcVar6_1.classList.remove('active')
+            calcVar6_2.classList.remove('active')
+            calcVar6_3.classList.add('active')
 
             total6 = 75
         })
@@ -1061,6 +1401,11 @@
             calcItem7.classList.remove('choice-2')
             calcItem7.classList.remove('choice-3')
 
+            calcVar7_0.classList.add('active')
+            calcVar7_1.classList.add('active')
+            calcVar7_2.classList.remove('active')
+            calcVar7_3.classList.remove('active')
+
             total7 = 25
         })
 
@@ -1068,6 +1413,11 @@
             calcItem7.classList.add('choice-1')
             calcItem7.classList.add('choice-2')
             calcItem7.classList.remove('choice-3')
+
+            calcVar7_0.classList.add('active')
+            calcVar7_1.classList.remove('active')
+            calcVar7_2.classList.add('active')
+            calcVar7_3.classList.remove('active')
 
             total7 = 55
         })
@@ -1077,6 +1427,11 @@
             calcItem7.classList.add('choice-2')
             calcItem7.classList.add('choice-3')
 
+            calcVar7_0.classList.add('active')
+            calcVar7_1.classList.remove('active')
+            calcVar7_2.classList.remove('active')
+            calcVar7_3.classList.add('active')
+
             total7 = 75
         })
 
@@ -1084,12 +1439,18 @@
 
         var totalBtn = document.querySelector('.calculator__btn');
         var totalSumm = document.querySelector('.calculator__total')
+        var calcModal = document.querySelector('.calculator__modal')
+        var calcDef = document.querySelector('.calculator__inner')
+        var calcDefSubtitle = document.querySelector('.subtitle')
 
         
         totalBtn.addEventListener('click',function(){
-            var total = total1 + total2 + total3 + total4 + total5 + total6 + total7;
-            console.log(total);
+            var total = total1 + total2 + total3 + total4 + total5 + total6 + total7 + '$';
             totalSumm.innerHTML = total;
+
+            calcModal.classList.add('active')
+            calcDef.style.display = 'none'
+            calcDefSubtitle.style.display = 'none'
         })
     </script>
     <script src="./app/preloader.js"></script>
