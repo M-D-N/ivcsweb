@@ -153,7 +153,7 @@
         }
 
         .calculator__dropdown.active {
-            height: 276px;
+            height: 415px;
         }
 
         .calculator__dropdown.active .calculator__dropdown-hero img {
@@ -477,7 +477,7 @@
         .calculator__modal-main {
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             padding-bottom: 90px;
         }
 
@@ -593,6 +593,11 @@
         .hover2:hover{
             box-shadow: 0 0 10px #fff !important;
             background: #fff !important;
+        }
+        .calculator__form-item-title span{
+            color: rgba(255, 255, 255, 0.471);
+            font-weight: 100;
+            font-size: 22px;
         }
     </style>
 </head>
@@ -746,15 +751,21 @@
                         <div class="calculator__hero">
                             <div class="calculator__dropdown">
                                 <div class="calculator__dropdown-hero">
-                                    <span>Лендинг</span>
+                                    <span>Интернет-магазин</span>
                                     <img src="images/calculator-down.svg" alt="">
                                 </div>
                                 <div class="calculator__dropdown-list">
                                     <a href="#!" class="calculator__dropdown-list-item">
-                                        <span>Лендинг</span>
+                                        <span>Интернет-витрина</span>
                                     </a>
                                     <a href="#!" class="calculator__dropdown-list-item">
-                                        <span>Лендинг</span>
+                                        <span>Промо-сайт</span>
+                                    </a>
+                                    <a href="#!" class="calculator__dropdown-list-item">
+                                        <span>Корпоративный сайт</span>
+                                    </a>
+                                    <a href="#!" class="calculator__dropdown-list-item">
+                                        <span>Сайт визитка</span>
                                     </a>
                                     <a href="#!" class="calculator__dropdown-list-item">
                                         <span>Лендинг</span>
@@ -802,7 +813,7 @@
                             </div>
 
                             <div class="calculator__form-item calculator__form-item-3">
-                                <h5 class="calculator__form-item-title">Адаптация сайта под устройства</h5>
+                                <h5 class="calculator__form-item-title">Адаптация сайта под устройства <span>(Планшет; Телефон)</span></h5>
                                 <div class="calculator__range">
                                     <div class="calculator__range-line"></div>
                                     <div class="calculator__range-item calculator__range-item-1">
@@ -840,7 +851,7 @@
                             </div>
 
                             <div class="calculator__form-item calculator__form-item-5">
-                                <h5 class="calculator__form-item-title">Количество языков</h5>
+                                <h5 class="calculator__form-item-title">Количество языков <span>(Узбекский, Русский, Английский)</span></h5>
                                 <div class="calculator__range">
                                     <div class="calculator__range-line"></div>
                                     <div class="calculator__range-item calculator__range-item-1">
@@ -859,38 +870,38 @@
                             </div>
 
                             <div class="calculator__form-item calculator__form-item-6">
-                                <h5 class="calculator__form-item-title">Количество языков</h5>
+                                <h5 class="calculator__form-item-title">Возможности интернет магазина</h5>
                                 <div class="calculator__range">
                                     <div class="calculator__range-line"></div>
                                     <div class="calculator__range-item calculator__range-item-1">
-                                        <span>1</span>
+                                        <span>Не требуется</span>
                                         <button type="button" class="calc__btn-6-1"></button>
                                     </div>
                                     <div class="calculator__range-item calculator__range-item-2">
-                                        <span>2</span>
+                                        <span>Корзина</span>
                                         <button type="button" class="calc__btn-6-2"></button>
                                     </div>
                                     <div class="calculator__range-item calculator__range-item-3">
-                                        <span>3</span>
+                                        <span>Оплаты</span>
                                         <button type="button" class="calc__btn-6-3"></button>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="calculator__form-item calculator__form-item-7">
-                                <h5 class="calculator__form-item-title">Количество языков</h5>
+                                <h5 class="calculator__form-item-title">SEO услуга</h5>
                                 <div class="calculator__range">
                                     <div class="calculator__range-line"></div>
                                     <div class="calculator__range-item calculator__range-item-1">
-                                        <span>1</span>
+                                        <span>Не требуется</span>
                                         <button type="button" class="calc__btn-7-1"></button>
                                     </div>
                                     <div class="calculator__range-item calculator__range-item-2">
-                                        <span>2</span>
+                                        <span>10 слов</span>
                                         <button type="button" class="calc__btn-7-2"></button>
                                     </div>
                                     <div class="calculator__range-item calculator__range-item-3">
-                                        <span>3</span>
+                                        <span>20 слов</span>
                                         <button type="button" class="calc__btn-7-3"></button>
                                     </div>
                                 </div>
@@ -909,7 +920,7 @@
                                 <div class="calculator__modal-list">
                                     <div class="calculator__modal-list-item">
                                         <span class="calculator__modal-list-name">Вид сайта -</span>
-                                        <span class="calculator__modal-list-type calculator__modal-list-var">Визитка</span>
+                                        <span class="calculator__modal-list-type calculator__modal-list-var">Интернет-магазин</span>
                                     </div>
                                     <div class="calculator__modal-list-item">
                                         <span class="calculator__modal-list-name">Кол-во стр -</span>
@@ -921,23 +932,23 @@
                                     <div class="calculator__modal-list-item">
                                         <span class="calculator__modal-list-name">Уровень дизайна -</span>
                                         <span class="calculator__modal-list-var-2-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
-                                        <span class="calculator__modal-list-var-2-1 calculator__modal-list-var">Норм</span>
-                                        <span class="calculator__modal-list-var-2-2 calculator__modal-list-var">неплокс</span>
-                                        <span class="calculator__modal-list-var-2-3 calculator__modal-list-var">Ок</span>
+                                        <span class="calculator__modal-list-var-2-1 calculator__modal-list-var">Простой</span>
+                                        <span class="calculator__modal-list-var-2-2 calculator__modal-list-var">Высокий</span>
+                                        <span class="calculator__modal-list-var-2-3 calculator__modal-list-var">Особый</span>
                                     </div>
                                     <div class="calculator__modal-list-item">
                                         <span class="calculator__modal-list-name">Адаптация сайта -</span>
                                         <span class="calculator__modal-list-var-3-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
-                                        <span class="calculator__modal-list-var-3-1 calculator__modal-list-var">Телефон</span>
-                                        <span class="calculator__modal-list-var-3-2 calculator__modal-list-var">Телефон 1</span>
-                                        <span class="calculator__modal-list-var-3-3 calculator__modal-list-var">Телефон 2</span>
+                                        <span class="calculator__modal-list-var-3-1 calculator__modal-list-var">Не требуется</span>
+                                        <span class="calculator__modal-list-var-3-2 calculator__modal-list-var">Телефон</span>
+                                        <span class="calculator__modal-list-var-3-3 calculator__modal-list-var">Телефон + Планшет</span>
                                     </div>
                                     <div class="calculator__modal-list-item">
                                         <span class="calculator__modal-list-name">Система управления сайта -</span>
                                         <span class="calculator__modal-list-var-4-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
-                                        <span class="calculator__modal-list-var-4-1 calculator__modal-list-var">1</span>
-                                        <span class="calculator__modal-list-var-4-2 calculator__modal-list-var">2</span>
-                                        <span class="calculator__modal-list-var-4-3 calculator__modal-list-var">3</span>
+                                        <span class="calculator__modal-list-var-4-1 calculator__modal-list-var">Не требуется</span>
+                                        <span class="calculator__modal-list-var-4-2 calculator__modal-list-var">Стандартный</span>
+                                        <span class="calculator__modal-list-var-4-3 calculator__modal-list-var">Расширенный</span>
                                     </div>
                                     <div class="calculator__modal-list-item">
                                         <span class="calculator__modal-list-name">Количество языков -</span>
@@ -947,18 +958,18 @@
                                         <span class="calculator__modal-list-var-5-3 calculator__modal-list-var">3</span>
                                     </div>
                                     <div class="calculator__modal-list-item">
-                                        <span class="calculator__modal-list-name">SEO услуга -</span>
+                                        <span class="calculator__modal-list-name">Возможности интернет магазина -</span>
                                         <span class="calculator__modal-list-var-6-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
-                                        <span class="calculator__modal-list-var-6-1 calculator__modal-list-var">1</span>
-                                        <span class="calculator__modal-list-var-6-2 calculator__modal-list-var">2</span>
-                                        <span class="calculator__modal-list-var-6-3 calculator__modal-list-var">3</span>
+                                        <span class="calculator__modal-list-var-6-1 calculator__modal-list-var">Не требуется</span>
+                                        <span class="calculator__modal-list-var-6-2 calculator__modal-list-var">Корзина</span>
+                                        <span class="calculator__modal-list-var-6-3 calculator__modal-list-var">Корзина + Оплаты</span>
                                     </div>
                                     <div class="calculator__modal-list-item">
                                         <span class="calculator__modal-list-name">SEO услуга -</span>
                                         <span class="calculator__modal-list-var-7-0 calculator__modal-list-var calculator__modal-list-var-0">Не выбрано (0$)</span>
-                                        <span class="calculator__modal-list-var-7-1 calculator__modal-list-var">1</span>
-                                        <span class="calculator__modal-list-var-7-2 calculator__modal-list-var">2</span>
-                                        <span class="calculator__modal-list-var-7-3 calculator__modal-list-var">3</span>
+                                        <span class="calculator__modal-list-var-7-1 calculator__modal-list-var">Не требуется</span>
+                                        <span class="calculator__modal-list-var-7-2 calculator__modal-list-var">10 слов</span>
+                                        <span class="calculator__modal-list-var-7-3 calculator__modal-list-var">20 слов</span>
                                     </div>
                                 </div>
                                 <div class="calculator__modal-btn">
@@ -967,7 +978,7 @@
                                 </div>
                             </div>
                             <div class="calculator__modal-img">
-                                <img src="images/72178-man-working-under-lamp-light.gif" alt="">
+                                <img src="images/calc__modal-img.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -1137,7 +1148,7 @@
             calcVar1_2.classList.remove('active')
             calcVar1_3.classList.remove('active')
 
-            total1 = 10
+            total1 = 200
         })
 
         calcBtn1_2.addEventListener('click',function(){
@@ -1150,7 +1161,7 @@
             calcVar1_2.classList.add('active')
             calcVar1_3.classList.remove('active')
 
-            total1 = 50
+            total1 = 400
         })
 
         calcBtn1_3.addEventListener('click',function(){
@@ -1163,7 +1174,7 @@
             calcVar1_2.classList.remove('active')
             calcVar1_3.classList.add('active')
 
-            total1 = 100
+            total1 = 600
         })
 
         // 2
@@ -1182,7 +1193,7 @@
             calcVar2_2.classList.remove('active')
             calcVar2_3.classList.remove('active')
 
-            total2 = 20
+            total2 = 50
         })
 
         calcBtn2_2.addEventListener('click',function(){
@@ -1195,7 +1206,7 @@
             calcVar2_2.classList.add('active')
             calcVar2_3.classList.remove('active')
 
-            total2 = 30
+            total2 = 100
         })
 
         calcBtn2_3.addEventListener('click',function(){
@@ -1208,7 +1219,7 @@
             calcVar2_2.classList.remove('active')
             calcVar2_3.classList.add('active')
 
-            total2 = 80
+            total2 = 150
         })
 
         // 3
@@ -1227,7 +1238,7 @@
             calcVar3_2.classList.remove('active')
             calcVar3_3.classList.remove('active')
 
-            total3 = 25
+            total3 = 0
         })
 
         calcBtn3_2.addEventListener('click',function(){
@@ -1240,7 +1251,7 @@
             calcVar3_2.classList.add('active')
             calcVar3_3.classList.remove('active')
 
-            total3 = 55
+            total3 = 15
         })
 
         calcBtn3_3.addEventListener('click',function(){
@@ -1253,7 +1264,7 @@
             calcVar3_2.classList.remove('active')
             calcVar3_3.classList.add('active')
 
-            total3 = 75
+            total3 = 30
         })
 
         // 4
@@ -1272,7 +1283,7 @@
             calcVar4_2.classList.remove('active')
             calcVar4_3.classList.remove('active')
 
-            total4 = 25
+            total4 = 0
         })
 
         calcBtn4_2.addEventListener('click',function(){
@@ -1285,7 +1296,7 @@
             calcVar4_2.classList.add('active')
             calcVar4_3.classList.remove('active')
 
-            total4 = 55
+            total4 = 70
         })
 
         calcBtn4_3.addEventListener('click',function(){
@@ -1298,7 +1309,7 @@
             calcVar4_2.classList.remove('active')
             calcVar4_3.classList.add('active')
 
-            total4 = 75
+            total4 = 150
         })
 
         // 5
@@ -1317,7 +1328,7 @@
             calcVar5_2.classList.remove('active')
             calcVar5_3.classList.remove('active')
 
-            total5 = 25
+            total5 = 10
         })
 
         calcBtn5_2.addEventListener('click',function(){
@@ -1330,7 +1341,7 @@
             calcVar5_2.classList.add('active')
             calcVar5_3.classList.remove('active')
 
-            total5 = 55
+            total5 = 10
         })
 
         calcBtn5_3.addEventListener('click',function(){
@@ -1343,7 +1354,7 @@
             calcVar5_2.classList.remove('active')
             calcVar5_3.classList.add('active')
 
-            total5 = 75
+            total5 = 10
         })
 
         // 6
@@ -1362,7 +1373,7 @@
             calcVar6_2.classList.remove('active')
             calcVar6_3.classList.remove('active')
 
-            total6 = 25
+            total6 = 0
         })
 
         calcBtn6_2.addEventListener('click',function(){
@@ -1375,7 +1386,7 @@
             calcVar6_2.classList.add('active')
             calcVar6_3.classList.remove('active')
 
-            total6 = 55
+            total6 = 30
         })
 
         calcBtn6_3.addEventListener('click',function(){
@@ -1388,7 +1399,7 @@
             calcVar6_2.classList.remove('active')
             calcVar6_3.classList.add('active')
 
-            total6 = 75
+            total6 = 50
         })
 
         // 7
@@ -1407,7 +1418,7 @@
             calcVar7_2.classList.remove('active')
             calcVar7_3.classList.remove('active')
 
-            total7 = 25
+            total7 = 0
         })
 
         calcBtn7_2.addEventListener('click',function(){
@@ -1420,7 +1431,7 @@
             calcVar7_2.classList.add('active')
             calcVar7_3.classList.remove('active')
 
-            total7 = 55
+            total7 = 30
         })
 
         calcBtn7_3.addEventListener('click',function(){
@@ -1433,7 +1444,7 @@
             calcVar7_2.classList.remove('active')
             calcVar7_3.classList.add('active')
 
-            total7 = 75
+            total7 = 50
         })
 
         // total
