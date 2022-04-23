@@ -24,7 +24,7 @@ a{
 ul, li{
     list-style: none !important;
     margin: 0 !important;
-    padding: 0 !important; 
+    padding: 0 !important;
 }
 button{
   outline: none;
@@ -46,13 +46,13 @@ button{
   justify-content: space-between !important;
 }
 .justify-content-around{
-  justify-content: space-around !important;    
+  justify-content: space-around !important;
 }
 .justify-content-evenly{
-  justify-content: space-evenly !important;    
+  justify-content: space-evenly !important;
 }
 .justify-content-center{
-  justify-content: center !important;    
+  justify-content: center !important;
 }
 .justify-content-start{
   justify-content: flex-start !important;
@@ -98,7 +98,7 @@ position: relative !important;
 
 .header{
   height: 100vh;
-  position: relative;  
+  position: relative;
   overflow: hidden;
 }
 .header__navigation{
@@ -167,7 +167,7 @@ position: relative !important;
   margin-bottom: 50px !important;
 }
 .header__nav-btn{
-  position: absolute; 
+  position: absolute;
   width: max-content;
   right: 10px;
   top: 20px;
@@ -403,7 +403,7 @@ select option{
 }
 .active .header__nav-btn .open{
   display: none;
-} 
+}
 .active .header__nav-btn .close{
   display: block;
 }
@@ -1064,11 +1064,14 @@ select option{
     margin-bottom: 5px;
   }
 }
-@media(max-height:750px){
+@media(max-height:850px){
   .header__right-content-footer-img{
-    bottom: -150px;
+    display: none !important;
   }
   .header__content-btn{
-    margin-bottom: 5px;
+    display: none !important;
+  }
+  .as-2, .as-4{
+    margin-top: 180px !important;
   }
 }
