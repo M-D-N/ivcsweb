@@ -1071,7 +1071,9 @@ select option{
   .header__content-btn{
     display: none !important;
   }
-  .as-2, .as-4{
-    margin-top: 180px !important;
+  @media(max-height:750px){
+    .as-2, .as-4{
+      margin-top: 180px !important;
+    }
   }
 }
