@@ -132,33 +132,6 @@
     background-color: black;
 }
 
-.star {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-
-.star-1 {
-    left: 0;
-    top: 0;
-}
-
-.star-2 {
-    right: 0;
-    top: 0;
-}
-
-.star-3 {
-    bottom: 0;
-    left: 0;
-}
-
-.star-4 {
-    bottom: 0;
-    right: 0;
-}
-
 .subtitle {
     font-weight: 700;
     font-size: 48px;
@@ -249,10 +222,6 @@
         min-height: unset;
     }
 
-    .star {
-        display: none;
-    }
-    
     .site-visit__content-atribute {
         width: 100%;
         padding: 15px;
@@ -334,7 +303,7 @@
                     <div class="navbar__mobile-inner">
                         <div class="navbar__search">
                             <button type="button" class="navbar__mobile-search-icon">
-                                <img src="images/navbar-search.svg" alt="">                     
+                                <img src="images/navbar-search.svg" alt="">
                             </button>
                         </div>
                         <div class="burger__body">
@@ -367,7 +336,7 @@
                     <button type="button" class="navbar__search-icon">
                         <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
-                        </svg>                        
+                        </svg>
                     </button>
                 </div>
                 <div class="navbar__menu">
@@ -457,10 +426,6 @@
                         <h2 class="subtitle">Готово</h2>
                         <h3 class="subtitle-small">Данные успешно отправлены , ожидайте звонка менеджера .</h3>
                         <a href="./index.html" class="site-visit__content-inner-btn-main hover1">Главная</a>
-                        <img src="images/star.png" alt="" class="star star-1">
-                        <img src="images/star.png" alt="" class="star star-2">
-                        <img src="images/star.png" alt="" class="star star-3">
-                        <img src="images/star.png" alt="" class="star star-4">
                     </div>
                 </div>
             </div>
@@ -521,7 +486,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script>
         const body = document.querySelector('body')
         const navbar = document.querySelector('.navbar__menu')
@@ -533,7 +498,7 @@
         navbarBtn.addEventListener('click',function(){
             navbar.classList.toggle('active')
         })
-        
+
         navbarSearch.addEventListener('click',function(){
             navbarModal.classList.add('active')
         })
