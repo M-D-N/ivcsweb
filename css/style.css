@@ -606,6 +606,10 @@ select option{
   color: var(--white);
   font-family: var(--rr);
   margin-right: 40px;
+  transition: 300ms;
+}
+.quiz__contact-link{
+  color: var(--yellow);
 }
 .quiz-img{
   right: -80px;
