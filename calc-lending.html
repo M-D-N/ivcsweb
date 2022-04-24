@@ -551,7 +551,7 @@
         .calculator__modal-list-var-0 {
             display: block;
         }
-        
+
         .calculator__modal-list-var-0.active {
             display: none !important;
         }
@@ -599,6 +599,106 @@
             font-weight: 100;
             font-size: 22px;
         }
+        /* media */
+        @media (max-width: 1560px) {
+            .calculator__modal-main {
+                flex-direction: column;
+                align-items: center;
+                justify-content: unset;
+            }
+        }
+
+        @media (max-width: 980px) {
+            .subtitle {
+                font-size: 42px;
+            }
+
+            .calculator__content {
+                padding-top: 50px;
+            }
+
+            .calculator__modal {
+                row-gap: 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .subtitle {
+                font-size: 32px;
+            }
+
+            .calculator__inner {
+                align-items: center;
+            }
+
+            .site-visit__content-inner-btn-back {
+                display: none;
+            }
+
+            .calculator__form-item-title {
+                font-size: 20px;
+            }
+
+            .calculator__inner-subtitle {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+
+            .calculator__form {
+                align-items: center;
+            }
+
+            .calculator__range-item {
+                width: 90px;
+                top: -33px;
+            }
+
+            .calculator__range-item span {
+                font-size: 13px;
+            }
+
+            .calculator__modal-list-name {
+                font-size: 12px;
+            }
+
+            .calculator__modal-list-var {
+                font-size: 12px;
+            }
+
+            .calculator__modal-inner-title {
+                font-size: 20px;
+            }
+
+            .calculator__total {
+                font-size: 30px;
+            }
+
+            .calculator__modal-btn {
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            .calculator__modal-btn-item {
+                width: 100%;
+                max-width: unset;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .subtitle {
+                font-size: 24px;
+            }
+
+            .calculator__range-item {
+                width: 75px;
+                top: -31px;
+            }
+
+            .calculator__range-item span {
+                font-size: 11px;
+            }
+        }
+        /* media */
     </style>
 </head>
 <body>
@@ -624,7 +724,7 @@
                     <div class="navbar__mobile-inner">
                         <div class="navbar__search">
                             <button type="button" class="navbar__mobile-search-icon">
-                                <img src="images/navbar-search.svg" alt="">                     
+                                <img src="images/navbar-search.svg" alt="">
                             </button>
                         </div>
                         <div class="burger__body">
@@ -657,7 +757,7 @@
                     <button type="button" class="navbar__search-icon">
                         <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.23333 0C3.68619 0 0 3.68619 0 8.23333C0 12.7805 3.68619 16.4667 8.23333 16.4667C10.2789 16.4667 12.1503 15.7207 13.5902 14.4859L17.9188 18.8145L18.8145 17.9188L14.4859 13.5902C15.7207 12.1503 16.4667 10.2789 16.4667 8.23333C16.4667 3.68619 12.7805 0 8.23333 0Z"/>
-                        </svg>                        
+                        </svg>
                     </button>
                 </div>
                 <div class="navbar__menu">
@@ -745,7 +845,7 @@
                         <a href="./index.html" class="site-visit__content-inner-btn-back">
                             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.33398 9.99984L6.66732 4.6665M1.33398 9.99984L6.66732 15.3332M1.33398 9.99984H18.0007"/>
-                            </svg>                            
+                            </svg>
                         </a>
                         <span class="calculator__inner-subtitle">Выберите сайт который вам нужен</span>
                         <div class="calculator__hero">
@@ -1054,7 +1154,7 @@
         navbarBtn.addEventListener('click',function(){
             navbar.classList.toggle('active')
         })
-        
+
         navbarSearch.addEventListener('click',function(){
             navbarModal.classList.add('active')
         })
@@ -1322,7 +1422,7 @@
             calcItem5.classList.add('choice-1')
             calcItem5.classList.remove('choice-2')
             calcItem5.classList.remove('choice-3')
-            
+
             calcVar5_0.classList.add('active')
             calcVar5_1.classList.add('active')
             calcVar5_2.classList.remove('active')
@@ -1455,7 +1555,7 @@
         var calcDef = document.querySelector('.calculator__inner')
         var calcDefSubtitle = document.querySelector('.subtitle')
 
-        
+
         totalBtn.addEventListener('click',function(){
             var total = total1 + total2 + total3 + total4 + total5 + total7 + '$';
             totalSumm.innerHTML = total;
