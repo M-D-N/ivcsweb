@@ -497,13 +497,12 @@
         .calculator__modal-img {
             width: 100%;
             max-width: 550px;
-            height: 550px;
         }
 
         .calculator__modal-img img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
 
         .calculator__modal-list-item {
@@ -598,6 +597,106 @@
             color: rgba(255, 255, 255, 0.471);
             font-weight: 100;
             font-size: 22px;
+        }
+
+        /* media */
+        @media (max-width: 1560px) {
+            .calculator__modal-main {
+                flex-direction: column;
+                align-items: center;
+                justify-content: unset;
+            }
+        }
+        
+        @media (max-width: 980px) {
+            .subtitle {
+                font-size: 42px;
+            }
+
+            .calculator__content {
+                padding-top: 50px;
+            }
+
+            .calculator__modal {
+                row-gap: 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .subtitle {
+                font-size: 32px;
+            }
+
+            .calculator__inner {
+                align-items: center;
+            }
+
+            .site-visit__content-inner-btn-back {
+                display: none;
+            }
+
+            .calculator__form-item-title {
+                font-size: 20px;
+            }
+
+            .calculator__inner-subtitle {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+
+            .calculator__form {
+                align-items: center;
+            }
+            
+            .calculator__range-item {
+                width: 90px;
+                top: -33px;
+            }
+
+            .calculator__range-item span {
+                font-size: 13px;
+            }
+            
+            .calculator__modal-list-name {
+                font-size: 12px;   
+            }
+
+            .calculator__modal-list-var {
+                font-size: 12px;   
+            }
+
+            .calculator__modal-inner-title {
+                font-size: 20px;
+            }
+
+            .calculator__total {
+                font-size: 30px;
+            }
+
+            .calculator__modal-btn {
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            .calculator__modal-btn-item {
+                width: 100%;
+                max-width: unset;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .subtitle {
+                font-size: 24px;
+            }
+
+            .calculator__range-item {
+                width: 75px;
+                top: -31px;
+            }
+
+            .calculator__range-item span {
+                font-size: 11px;
+            }
         }
     </style>
 </head>
@@ -914,7 +1013,7 @@
                         <h2 class="subtitle">ЕСЛИ ОСТАЛИСЬ КАКИЕ-ТО ВОПРОСЫ, <span>НАПИШИТЕ</span> ИЛИ <span>ПОЗВОНИТЕ</span> НАМ</h2>
                         <div class="calculator__modal-main">
                             <div class="calculator__modal-inner">
-                                <span class="calculator__modal-inner-title">Примерная стоимоть вашего сайта</span>
+                                <span class="calculator__modal-inner-title">Примерная стоимость вашего сайта</span>
                                 <span class="calculator__total">0</span>
                                 <span class="calculator__modal-inner-title">Список услуг который вы выбрали</span>
                                 <div class="calculator__modal-list">
