@@ -126,6 +126,7 @@ body.lock {
     width: 100%;
     display: flex;
     justify-content: center;
+    user-select: none;
 }
 
 .navbar__menu-def-language-inner {
