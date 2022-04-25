@@ -150,6 +150,7 @@
             position: absolute;
             transition: 0.3s;
             border-radius: 10px;
+            user-select: none;
         }
 
         .calculator__dropdown.active {
@@ -399,6 +400,7 @@
             height: 5px;
             background-color: #F4C42B;
             border-radius: 50px;
+            transition: 1s;
         }
 
         .calculator__range-item {
@@ -436,6 +438,11 @@
             border: none;
             outline: none;
             cursor: pointer;
+            transition: 0.3;
+        }
+        
+        .calculator__range-item button:hover {
+            background-color: #F4C42B;
         }
 
         .calculator__btn {
