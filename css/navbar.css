@@ -142,6 +142,7 @@ body.lock {
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
+    cursor: default;
 }
 
 .navbar__menu-def-language-inner.active .navbar__menu-def-language-hero {
