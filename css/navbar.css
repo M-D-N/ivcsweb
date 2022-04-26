@@ -293,9 +293,8 @@ body.lock {
 .navbar__menu-full-language-btn {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #fff;
     border: none;
     outline: none;
