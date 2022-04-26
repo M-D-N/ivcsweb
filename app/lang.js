@@ -14,6 +14,16 @@
             navbarLangDef1.style.display = 'none'
             navbarLangDef2.style.display = 'flex'
             navbarLangDef3.style.display = 'flex'
+
+            navbarLangFullVar.innerHTML = 'Русский'
+            navbarLangFull1.style.display = 'none'
+            navbarLangFull2.style.display = 'flex'
+            navbarLangFull3.style.display = 'flex'
+
+            navbarLangMobileVar.innerHTML = 'Русский'
+            navbarLangMobile1.style.display = 'none'
+            navbarLangMobile2.style.display = 'flex'
+            navbarLangMobile3.style.display = 'flex'
         })
 
         navbarLangDef2.addEventListener('click',function(){
@@ -21,6 +31,16 @@
             navbarLangDef1.style.display = 'flex'
             navbarLangDef2.style.display = 'none'
             navbarLangDef3.style.display = 'flex'
+
+            navbarLangFullVar.innerHTML = 'Узбекский'
+            navbarLangFull1.style.display = 'flex'
+            navbarLangFull2.style.display = 'none'
+            navbarLangFull3.style.display = 'flex'
+
+            navbarLangMobileVar.innerHTML = 'Узбекский'
+            navbarLangMobile1.style.display = 'flex'
+            navbarLangMobile2.style.display = 'none'
+            navbarLangMobile3.style.display = 'flex'
         })
 
         navbarLangDef3.addEventListener('click',function(){
@@ -28,6 +48,16 @@
             navbarLangDef1.style.display = 'flex'
             navbarLangDef2.style.display = 'flex'
             navbarLangDef3.style.display = 'none'
+
+            navbarLangFullVar.innerHTML = 'Английский'
+            navbarLangFull1.style.display = 'flex'
+            navbarLangFull2.style.display = 'flex'
+            navbarLangFull3.style.display = 'none'
+
+            navbarLangMobileVar.innerHTML = 'Английский'
+            navbarLangMobile1.style.display = 'flex'
+            navbarLangMobile2.style.display = 'flex'
+            navbarLangMobile3.style.display = 'none'
         })
 
         // lang def end
@@ -48,6 +78,16 @@
             navbarLangFull1.style.display = 'none'
             navbarLangFull2.style.display = 'flex'
             navbarLangFull3.style.display = 'flex'
+
+            navbarLangDefVar.innerHTML = 'Ru'
+            navbarLangDef1.style.display = 'none'
+            navbarLangDef2.style.display = 'flex'
+            navbarLangDef3.style.display = 'flex'
+
+            navbarLangMobileVar.innerHTML = 'Русский'
+            navbarLangMobile1.style.display = 'none'
+            navbarLangMobile2.style.display = 'flex'
+            navbarLangMobile3.style.display = 'flex'
         })
 
         navbarLangFull2.addEventListener('click',function(){
@@ -55,6 +95,16 @@
             navbarLangFull1.style.display = 'flex'
             navbarLangFull2.style.display = 'none'
             navbarLangFull3.style.display = 'flex'
+
+            navbarLangDefVar.innerHTML = 'Uz'
+            navbarLangDef1.style.display = 'flex'
+            navbarLangDef2.style.display = 'none'
+            navbarLangDef3.style.display = 'flex'
+
+            navbarLangMobileVar.innerHTML = 'Узбекский'
+            navbarLangMobile1.style.display = 'flex'
+            navbarLangMobile2.style.display = 'none'
+            navbarLangMobile3.style.display = 'flex'
         })
 
         navbarLangFull3.addEventListener('click',function(){
@@ -62,6 +112,16 @@
             navbarLangFull1.style.display = 'flex'
             navbarLangFull2.style.display = 'flex'
             navbarLangFull3.style.display = 'none'
+
+            navbarLangDefVar.innerHTML = 'En'
+            navbarLangDef1.style.display = 'flex'
+            navbarLangDef2.style.display = 'flex'
+            navbarLangDef3.style.display = 'none'
+
+            navbarLangMobileVar.innerHTML = 'Английский'
+            navbarLangMobile1.style.display = 'flex'
+            navbarLangMobile2.style.display = 'flex'
+            navbarLangMobile3.style.display = 'none'
         })
 
         // lang full end
@@ -82,6 +142,16 @@
             navbarLangMobile1.style.display = 'none'
             navbarLangMobile2.style.display = 'flex'
             navbarLangMobile3.style.display = 'flex'
+
+            navbarLangFullVar.innerHTML = 'Русский'
+            navbarLangFull1.style.display = 'none'
+            navbarLangFull2.style.display = 'flex'
+            navbarLangFull3.style.display = 'flex'
+
+            navbarLangDefVar.innerHTML = 'Ru'
+            navbarLangDef1.style.display = 'none'
+            navbarLangDef2.style.display = 'flex'
+            navbarLangDef3.style.display = 'flex'
         })
 
         navbarLangMobile2.addEventListener('click',function(){
@@ -89,6 +159,16 @@
             navbarLangMobile1.style.display = 'flex'
             navbarLangMobile2.style.display = 'none'
             navbarLangMobile3.style.display = 'flex'
+
+            navbarLangFullVar.innerHTML = 'Узбекский'
+            navbarLangFull1.style.display = 'flex'
+            navbarLangFull2.style.display = 'none'
+            navbarLangFull3.style.display = 'flex'
+
+            navbarLangDefVar.innerHTML = 'Uz'
+            navbarLangDef1.style.display = 'flex'
+            navbarLangDef2.style.display = 'none'
+            navbarLangDef3.style.display = 'flex'
         })
 
         navbarLangMobile3.addEventListener('click',function(){
@@ -96,6 +176,16 @@
             navbarLangMobile1.style.display = 'flex'
             navbarLangMobile2.style.display = 'flex'
             navbarLangMobile3.style.display = 'none'
+
+            navbarLangFullVar.innerHTML = 'Английский'
+            navbarLangFull1.style.display = 'flex'
+            navbarLangFull2.style.display = 'flex'
+            navbarLangFull3.style.display = 'none'
+
+            navbarLangDefVar.innerHTML = 'En'
+            navbarLangDef1.style.display = 'flex'
+            navbarLangDef2.style.display = 'flex'
+            navbarLangDef3.style.display = 'none'
         })
 
-        // lang full end
+        // lang mobile end
