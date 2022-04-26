@@ -307,7 +307,6 @@ body.lock {
 .navbar__menu-mobile-language-btn {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 20px;
     background-color: #fff;
