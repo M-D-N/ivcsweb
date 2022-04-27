@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVCS - Web Studio | Наши работы</title>
+    <link rel="stylesheet" href="./css/preloader.css">
+    <style>
+        @font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('./fonts/Raleway-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'raleway';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #141414;
+}
+
+.container {
+    width: 100%;
+    max-width: 1650px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* slider */
+.navbar {
+    width: 100%;
+    padding: 55px 0;
+}
+
+.navbar__nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.navbar__link {
+    font-weight: 300;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.navbar__link:hover {
+    text-shadow: 0 0 20px #f3c42C;
+}
+
+.navbar__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.navbar__link:hover::before {
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+    overflow-x: scroll;
+    height: 350px;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    height: 0;
+}
+
+.slider__content {
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding: 25px;
+}
+
+.slider__content-link {
+    min-width: 220px;
+    height: 150px;
+    display: flex;
+    filter: blur(5px);
+    transition: 0.3s;
+    position: relative;
+}
+
+.slider__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slider__content-link:hover {
+    filter: blur(0);
+    transform: scale(1.2) rotate(0) !important;
+}
+
+.slider__content-link:nth-of-type(1) {
+    transform: rotate(-10deg);
+}
+
+.slider__content-link:nth-of-type(2) {
+    transform: rotate(2deg);
+    margin-top: 150px;
+}
+
+.slider__content-link:nth-of-type(3) {
+    transform: rotate(15deg);
+    margin-top: 80px;
+    margin-left: 180px;
+}
+
+.slider__content-link:nth-of-type(4) {
+    transform: rotate(-3deg);
+    margin-left: 130px;
+}
+
+.slider__content-link:nth-of-type(5) {
+    transform: rotate(12deg);
+    margin-left: 130px;
+    margin-top: 150px;
+}
+
+.slider__content-link:nth-of-type(6) {
+    transform: rotate(-12deg);
+    margin-left: 130px;
+    margin-top: 120px;
+}
+
+.slider__content-link:nth-of-type(7) {
+    transform: rotate(4deg);
+    margin-left: 130px;
+}
+
+.slider__content-link:nth-of-type(8) {
+    transform: rotate(14deg);
+    margin-left: 130px;
+    margin-top: 150px;
+}
+.slider__content-link:nth-of-type(9) {
+    transform: rotate(-20deg);
+    margin-left: 130px;
+    margin-top: 50px;
+}
+.slider__content-link:nth-of-type(10) {
+    transform: rotate(4deg);
+    margin-left: 130px;
+    margin-top: 100px;
+}
+.slider__content-link:nth-of-type(11) {
+    transform: rotate(-12deg);
+    margin-left: 130px;
+    margin-top: 10px;
+}
+.slider__content-link:nth-of-type(12) {
+    transform: rotate(12deg);
+    margin-left: 130px;
+    margin-top: 20px;
+}
+.slider__content-link:nth-of-type(13) {
+    transform: rotate(3deg);
+    margin-left: 130px;
+    margin-top: 150px;
+}
+.slider__content-link:nth-of-type(14) {
+    transform: rotate(15deg);
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+.slider__link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+}
+
+.slider__link span {
+    color: #F4C42B;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.navbar__mobile {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    z-index: 10;
+    position: fixed;
+    padding: 25px 0;
+    left: 0;
+    top: 0;
+}
+
+.navbar__burger.active .navbar__burger-icon span:nth-child(1) {
+    width: 70%;
+}
+
+.navbar__burger.active .navbar__burger-icon span:nth-child(3) {
+    width: 70%;
+    margin-left: 30%;
+}
+
+.navbar__burger.active .navbar__burger-body {
+    top: 0;
+}
+
+.navbar__logo {
+    position: relative;
+    z-index: 20;
+}
+
+.navbar__burger-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+}
+
+.navbar__burger-icon span {
+    width: 100%;
+    height: 3px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #F4C42B;
+    transition: 0.3s;
+}
+
+.navbar__burger-body {
+    position: fixed;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* backdrop-filter: blur(10px); */
+    transition: 0.3s;
+    background-color: #101010;
+    row-gap: 50px;
+    padding-top: 50px;
+}
+
+.navbar__burger-link {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .navbar__list {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .navbar__link {
+        font-size: 14px;
+    }
+
+    .navbar__logo img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar__list {
+        display: none;
+    }
+
+    .navbar__mobile {
+        display: flex;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="pagePreloader" class="preloader">
+        <div class="loader"></div>
+        <img class="preloader-img" src="./images/preloader.png" alt="">
+    </div>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar__nav">
+                    <ul class="navbar__list">
+                        <li>
+                            <a href="./services.html" class="navbar__link">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="./works.html" class="navbar__link">Портфолио</a>
+                        </li>
+                        <li>
+                            <a href="./works.html" class="navbar__logo"><img src="images/slider-logo.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="navbar__link">О нас</a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html" class="navbar__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar__mobile">
+                    <a href="./index.html" class="navbar__logo"><img src="images/slider-logo.png" alt=""></a>
+                    <div class="navbar__burger">
+                        <div class="navbar__burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="navbar__burger-body">
+                            <a href="./services.html" class="navbar__burger-link">Услуги</a>
+                            <a href="./works.html" class="navbar__burger-link">Портфолио</a>
+                            <a href="./about.html" class="navbar__burger-link">О нас</a>
+                            <a href="./contacts.html" class="navbar__burger-link">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="slider">
+                <div class="slider__content">
+                    <a target="_blank" href="https://www.behance.net/gallery/142300673/Sweet-World" class="slider__content-link"><img src="images/graphicDesign.jpg" alt="" class="slider__img"></a>
+                </div>
+        </section>
+        <a href="#slider-scroll" class="slider__link"><span>Листни в право</span><img src="images/slider-link.svg" alt=""></a>
+    </div>
+
+    <script>
+        const burgerMenu = document.querySelector('.navbar__burger')
+        burgerMenu.addEventListener('click',function(){
+            burgerMenu.classList.toggle('active')
+        })
+    </script>
+    <script src="./app/preloader.js"></script>
+</body>
+</html>

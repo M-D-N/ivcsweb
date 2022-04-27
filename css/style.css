@@ -560,6 +560,7 @@ position: relative !important;
   position: relative;
   width: 526px;
   height: 296px;
+  overflow: hidden;
 }
 .works-img{
   width: 100%;
@@ -807,16 +808,16 @@ position: relative !important;
     bottom: -150px;
   }
   .about-img {
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
   .about-img-vector-2,
   .about-img-vector-3,
   .about-img-vector-1{
 
-    width: 100px;
-    height: 100px;
-    right: -150px;
+    width: 200px;
+    height: 200px;
+    right: -200px;
 
   }
 
