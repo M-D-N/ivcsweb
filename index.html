@@ -35,6 +35,229 @@
             font-family: 'raleway';
             font-weight: 900 !important;
         }
+        /* lang */
+        .navbar__menu-def-language,
+        .navbar__menu-full-language,
+        .navbar__menu-mobile-language {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            user-select: none;
+        }
+
+        .navbar__menu-full-language,
+        .navbar__menu-mobile-language {
+            margin-top: 30px;
+        }
+
+        .navbar__menu-def-language-inner {
+            position: relative;
+            width: 100%;
+            max-width: 40px;
+        }
+
+        .navbar__menu-full-language-inner {
+            position: relative;
+            width: 100%;
+        }
+
+        .navbar__menu-mobile-language-inner {
+            position: relative;
+            width: 100%;
+            max-width: 348px;
+            margin: 0 10px;
+        }
+
+        .navbar__menu-def-language-hero {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: default;
+        }
+
+        .navbar__menu-full-language-hero {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: default;
+        }
+
+        .navbar__menu-mobile-language-hero {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            cursor: default;
+        }
+
+        .navbar__menu-full-language-hero img {
+            display: flex;
+            transition: 0.3s;
+        }
+
+        .navbar__menu-mobile-language-hero img {
+            display: flex;
+            transition: 0.3s;
+        }
+
+        .navbar__menu-def-language-inner.active .navbar__menu-def-language-hero {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .navbar__menu-full-language-inner.active .navbar__menu-full-language-hero {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .navbar__menu-mobile-language-inner.active .navbar__menu-mobile-language-hero {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .navbar__menu-full-language-inner.active .navbar__menu-full-language-hero img {
+            transform: rotate(-180deg);
+        }
+
+        .navbar__menu-mobile-language-inner.active .navbar__menu-mobile-language-hero img {
+            transform: rotate(-180deg);
+        }
+
+        .navbar__menu-def-language-inner.active .navbar__menu-def-language-list {
+            display: flex;
+        }
+
+        .navbar__menu-full-language-inner.active .navbar__menu-full-language-list {
+            display: flex;
+        }
+
+        .navbar__menu-mobile-language-inner.active .navbar__menu-mobile-language-list {
+            display: flex;
+        }
+
+        .navbar__menu-def-language-var {
+            font-size: 16px;
+        }
+
+        .navbar__menu-full-language-var {
+            font-size: 16px;
+        }
+
+        .navbar__menu-mobile-language-var {
+            font-size: 16px;
+        }
+
+        .navbar__menu-def-language-list {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .navbar__menu-full-language-list {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .navbar__menu-mobile-language-list {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .navbar__menu-def-language-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .navbar__menu-full-language-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .navbar__menu-mobile-language-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .navbar__menu-def-language-btn:hover {
+            color: #F4C42B;
+            background-color: #000;
+        }
+
+        .navbar__menu-full-language-btn:hover {
+            color: #F4C42B;
+            background-color: #000;
+        }
+
+        .navbar__menu-mobile-language-btn:hover {
+            color: #F4C42B;
+            background-color: #000;
+        }
+
+        .navbar__menu-def-language-1 {
+            display: none;
+        }
+
+        .navbar__menu-full-language-1 {
+            display: none;
+        }
+
+        .navbar__menu-mobile-language-1 {
+            display: none;
+        }
+        /* lang */
     </style>
 </head>
 <body>
@@ -82,14 +305,22 @@
                     <li class="header__nav-i-li"><a href="./about.html" class="header__nav-i-link"><img class="header__icons-img" src="./images/simohamed.png" alt=""></a></li>
                     <li class="header__nav-i-li"><a href="./contacts.html" class="header__nav-i-link"><img class="header__icons-img" src="./images/phone.png" alt=""></a></li>
                 </ul>
-                <div class="header__nav-top-box">
-                    <a class="d-flex justify-content-center" href="./index.html"><img class="header__logo" src="./images/logo.png" alt=""></a>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Русский</option>
-                        <option value="1">Узбекский</option>
-                        <option value="2">Английский</option>
-                    </select>
-                </div>
+                <div class="navbar__menu-full-hero">
+                    <a href="#!" class="navbar__logo"><img src="images/navbar-logo.svg" alt=""></a>
+                    <div class="navbar__menu-full-language">
+                      <div class="navbar__menu-full-language-inner">
+                        <div class="navbar__menu-full-language-hero">
+                          <span class="navbar__menu-full-language-var">Русский</span>
+                          <img src="./images/calculator-down.svg" alt="">
+                        </div>
+                        <div class="navbar__menu-full-language-list">
+                          <button class="navbar__menu-full-language-btn navbar__menu-full-language-1">Русский</button>
+                          <button class="navbar__menu-full-language-btn navbar__menu-full-language-2">Узбекский</button>
+                          <button class="navbar__menu-full-language-btn navbar__menu-full-language-3">Английский</button>
+                           </div>
+                      </div>
+                    </div>
+                  </div>
                 <ul class="header__nav-ul">
                     <li class="header__nav-li"><a href="./index.html" class="header__nav-link hactive">Главная</a></li>
                     <li class="header__nav-li"><a href="./services.html" class="header__nav-link">Услуги</a></li>
@@ -120,11 +351,19 @@
                     </div>
                     <div class="burger__list p-absolute w-100 d-flex justify-content-center align-items-center flex-column">
                         <a href="#!" class="burger__logo"><img src="./images/burger-menu-logo.png" alt=""></a>
-                        <select name="" id="" class="navbar__select navbar__select-mobile">
-                            <option value="0">Русский</option>
-                            <option value="1">Узбекский</option>
-                            <option value="2">Английский</option>
-                        </select>
+                        <div class="navbar__menu-mobile-language">
+                            <div class="navbar__menu-mobile-language-inner">
+                               <div class="navbar__menu-mobile-language-hero">
+                                  <span class="navbar__menu-mobile-language-var">Русский</span>
+                                  <img src="./images/calculator-down.svg" alt="">
+                                </div>
+                                <div class="navbar__menu-mobile-language-list">
+                                  <button class="navbar__menu-mobile-language-btn navbar__menu-mobile-language-1">Русский</button>
+                                  <button class="navbar__menu-mobile-language-btn navbar__menu-mobile-language-2">Узбекский</button>
+                                  <button class="navbar__menu-mobile-language-btn navbar__menu-mobile-language-3">Английский</button>
+                                </div>
+                              </div>
+                           </div>
                         <a href="./index.html" class="burger__link">Главная</a>
                         <a href="./services.html" class="burger__link">Услуги</a>
                         <a href="./works.html" class="burger__link">Портфолио</a>
@@ -217,15 +456,15 @@
                 <h2 class="work__title">Наши работы</h2>
                 <div class="works-box d-flex flex-column align-items-center justify-content-center">
                     <div class="works-item d-flex justify-content-center align-items-center">
-                        <a href="https://www.behance.net/gallery/134029477/Dads-Burger" class="works-link">
+                        <a target="_blank" href="https://www.behance.net/gallery/134029477/Dads-Burger" class="works-link">
                             <img class="works-img" src="./images/works3.png" alt="">
                             <span class="works-span">WEB Design</span>
                         </a>
-                        <a href="https://www.behance.net/gallery/142300673/Sweet-World" class="works-link">
+                        <a target="_blank" href="https://www.behance.net/gallery/142300673/Sweet-World" class="works-link">
                             <img class="works-img" src="./images/graphicDesign.jpg" alt="">
                             <span class="works-span">Graphic Design</span>
                         </a>
-                        <a href="https://m-d-n.github.io/Vue-Cinema/" class="works-link">
+                        <a target="_blank" href="https://m-d-n.github.io/Vue-Cinema/" class="works-link">
                             <img class="works-img" src="./images/vueCinema.jpg" alt="">
                             <span class="works-span">Landing</span>
                         </a>

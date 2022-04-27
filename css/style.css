@@ -458,11 +458,11 @@ position: relative !important;
 .active .header__nav-icons{
   display: none;
 }
-.header__nav-top-box{
+.navbar__menu-full-hero{
   display: none;
   margin-top: 80px;
 }
-.active .header__nav-top-box{
+.active .navbar__menu-full-hero{
   display: block !important;
 }
 .header__search-title{
@@ -730,21 +730,6 @@ position: relative !important;
     color: var(--white);
     font-family: var(--rl);
     font-size: 24px;
-}
-.navbar__select-mobile{
-    max-width: 330px !important;
-    width: 100%;
-    padding: 12px 20px;
-    outline: none;
-    border: none;
-    margin-top: 0;
-    height: 60px;
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 21px;
-    background: url('../images/navbar__select-mobile.svg') center center;
-    appearance: none;
-
 }
 .navbar__mobile.top .burger__list{
   top: 0 !important;
