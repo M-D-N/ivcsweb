@@ -7,6 +7,8 @@
     background: url('../images/bg.png') center center no-repeat;
     background-size: cover;
     z-index: 9999 !important;
+    -webkit-transition: 1s all;
+    -o-transition: 1s all;
     transition: 1s all;
     opacity: 1;
     visibility: visible;
@@ -20,25 +22,42 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 9999 !important;
-    animation: 800ms spin infinite linear; 
+    -webkit-animation: 800ms spin infinite linear;
+            animation: 800ms spin infinite linear;
 }
 .preloader-img{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 .done{
     opacity: 0;
     visibility: hidden;
 }
-@keyframes spin {
+@-webkit-keyframes spin {
     from{
-        transform: translate(-50%, -50%) rotate(0deg);
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
     }
     to{
-        transform: translate(-50%, -50%) rotate(360deg);
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes spin {
+    from{
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to{
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
     }
 }
