@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/active-icons.css">
     <link rel="stylesheet" href="./css/preloader.css">
     <style>
-        @font-face {
+ @font-face {
             font-family: 'raleway';
             src: url('./fonts/Raleway-Light.ttf') format('truetype');
             font-weight: 300;
@@ -46,7 +46,8 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
             text-decoration: none;
             list-style: none;
             font-family: 'raleway';
@@ -66,14 +67,25 @@
 
         .contacts {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
         }
 
         .contacts__content {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding-top: 100px;
             height: 100vh;
             overflow-y: scroll;
@@ -100,14 +112,24 @@
             width: 100%;
             max-width: 1100px;
             padding: 0 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
         }
 
         .contacts__item {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
 
         .contacts__item h3 {
@@ -133,6 +155,8 @@
             width: 0;
             height: 2px;
             background-color: black;
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
             transition: 0.3s;
         }
 
@@ -143,13 +167,19 @@
         .contacts__img {
             width: 100%;
             max-width: 640px;
-            object-fit: contain;
+            -o-object-fit: contain;
+               object-fit: contain;
         }
 
         @media (max-width: 1400px) {
             .contacts__inner {
-                align-items: center;
-                flex-direction: column;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 row-gap: 70px;
             }
         }

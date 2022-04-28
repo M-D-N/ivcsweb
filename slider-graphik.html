@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/preloader.css">
     <style>
-        @font-face {
+@font-face {
     font-family: 'raleway';
     src: url('./fonts/Raleway-Light.ttf') format('truetype');
     font-weight: 300;
@@ -42,7 +42,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-family: 'raleway';
@@ -73,15 +74,27 @@ html {
 
 .navbar__nav {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .navbar__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    column-gap: 50px;
-    align-items: center;
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .navbar__link {
@@ -90,6 +103,8 @@ html {
     font-size: 18px;
     position: relative;
     padding: 10px 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -106,6 +121,8 @@ html {
     left: 0;
     bottom: 0;
     border-radius: 50px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -126,6 +143,8 @@ html {
 
 .slider__content {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     padding: 25px;
@@ -134,8 +153,13 @@ html {
 .slider__content-link {
     min-width: 220px;
     height: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    filter: blur(5px);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     position: relative;
 }
@@ -143,95 +167,133 @@ html {
 .slider__img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     position: absolute;
     left: 0;
     top: 0;
 }
 
 .slider__content-link:hover {
-    filter: blur(0);
-    transform: scale(1.2) rotate(0) !important;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1.2) rotate(0) !important;
+        -ms-transform: scale(1.2) rotate(0) !important;
+            transform: scale(1.2) rotate(0) !important;
 }
 
 .slider__content-link:nth-of-type(1) {
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg);
 }
 
 .slider__content-link:nth-of-type(2) {
-    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+            transform: rotate(2deg);
     margin-top: 150px;
 }
 
 .slider__content-link:nth-of-type(3) {
-    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+            transform: rotate(15deg);
     margin-top: 80px;
     margin-left: 180px;
 }
 
 .slider__content-link:nth-of-type(4) {
-    transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
     margin-left: 130px;
 }
 
 .slider__content-link:nth-of-type(5) {
-    transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+        -ms-transform: rotate(12deg);
+            transform: rotate(12deg);
     margin-left: 130px;
     margin-top: 150px;
 }
 
 .slider__content-link:nth-of-type(6) {
-    transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+        -ms-transform: rotate(-12deg);
+            transform: rotate(-12deg);
     margin-left: 130px;
     margin-top: 120px;
 }
 
 .slider__content-link:nth-of-type(7) {
-    transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+        -ms-transform: rotate(4deg);
+            transform: rotate(4deg);
     margin-left: 130px;
 }
 
 .slider__content-link:nth-of-type(8) {
-    transform: rotate(14deg);
+    -webkit-transform: rotate(14deg);
+        -ms-transform: rotate(14deg);
+            transform: rotate(14deg);
     margin-left: 130px;
     margin-top: 150px;
 }
 .slider__content-link:nth-of-type(9) {
-    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+            transform: rotate(-20deg);
     margin-left: 130px;
     margin-top: 50px;
 }
 .slider__content-link:nth-of-type(10) {
-    transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+        -ms-transform: rotate(4deg);
+            transform: rotate(4deg);
     margin-left: 130px;
     margin-top: 100px;
 }
 .slider__content-link:nth-of-type(11) {
-    transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+        -ms-transform: rotate(-12deg);
+            transform: rotate(-12deg);
     margin-left: 130px;
     margin-top: 10px;
 }
 .slider__content-link:nth-of-type(12) {
-    transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+        -ms-transform: rotate(12deg);
+            transform: rotate(12deg);
     margin-left: 130px;
     margin-top: 20px;
 }
 .slider__content-link:nth-of-type(13) {
-    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
     margin-left: 130px;
     margin-top: 150px;
 }
 .slider__content-link:nth-of-type(14) {
-    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+            transform: rotate(15deg);
     margin-left: 130px;
     margin-top: 20px;
 }
 
 .slider__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 10px;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     position: fixed;
     bottom: 30px;
@@ -246,8 +308,11 @@ html {
 .navbar__mobile {
     width: 100%;
     display: none;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     gap: 10px;
     z-index: 10;
     position: fixed;
@@ -277,9 +342,16 @@ html {
 .navbar__burger-icon {
     width: 30px;
     height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: relative;
     z-index: 20;
 }
@@ -289,7 +361,10 @@ html {
     height: 3px;
     border-radius: 50px;
     background-color: #fff;
-    box-shadow: 0 0 10px #F4C42B;
+    -webkit-box-shadow: 0 0 10px #F4C42B;
+            box-shadow: 0 0 10px #F4C42B;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -299,12 +374,23 @@ html {
     top: -100%;
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     z-index: 10;
     /* backdrop-filter: blur(10px); */
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     background-color: #101010;
     row-gap: 50px;
@@ -319,7 +405,8 @@ html {
 
 @media (max-width: 992px) {
     .navbar__list {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         gap: 25px;
     }
 
@@ -338,6 +425,8 @@ html {
     }
 
     .navbar__mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }

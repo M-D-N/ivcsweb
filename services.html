@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/active-icons.css">
     <link rel="stylesheet" href="./css/preloader.css">
     <style>
-        @font-face {
+@font-face {
             font-family: 'raleway';
             src: url('./fonts/Raleway-Light.ttf') format('truetype');
             font-weight: 300;
@@ -46,7 +46,8 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
             text-decoration: none;
             list-style: none;
             font-family: 'raleway';
@@ -66,6 +67,8 @@
 
         .services {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             position: relative;
         }
@@ -82,9 +85,18 @@
             overflow: hidden;
             border-radius: 50px;
             background-color: #F4C42B;
-            flex-direction: row-reverse;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: row-reverse;
+                    flex-direction: row-reverse;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
             transition: 0.3s;
             position: relative;
         }
@@ -99,9 +111,15 @@
             height: 100px;
             border-radius: 50px;
             background-color: #F4C42B;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
 
         .calculator-content {
@@ -112,8 +130,12 @@
             background-color: #F4C42B;
             padding: 30px;
             border-radius: 0 0 0 25px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
         .calculator-content span{
             text-align: start;
@@ -126,8 +148,12 @@
         .calculator__mobile {
             width: 100%;
             display: none;
-            justify-content: space-between;
-            align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding: 25px;
             border-radius: 10px;
             background-color: #F4C42B;
@@ -142,11 +168,18 @@
 
         .services-content {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             height: 100vh;
             overflow-y: scroll;
-            flex-direction: column;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding: 150px 15px 250px;
         }
 
@@ -169,37 +202,61 @@
 
         .services-inner {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            column-gap: 200px;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-column-gap: 200px;
+               -moz-column-gap: 200px;
+                    column-gap: 200px;
             row-gap: 50px;
         }
 
         .services-inner-col {
             width: 100%;
             max-width: 376px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             row-gap: 50px;
         }
 
         .services-item {
             width: 100%;
             height: 100px !important;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             position: relative;
             overflow: hidden;
             border-radius: 10px;
             background: url('./images/bg.png') no-repeat center center / cover;
             position: relative;
-            user-select: none;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
+            -webkit-transition: 300ms;
+            -o-transition: 300ms;
             transition: 300ms;
         }
 
         .services-item.active .services-item-hero img {
-            transform: rotate(-180deg);
+            -webkit-transform: rotate(-180deg);
+                -ms-transform: rotate(-180deg);
+                    transform: rotate(-180deg);
         }
 
         .services-item.active {
@@ -208,15 +265,25 @@
 
         .services-item-hero {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding: 36px 32px;
             cursor: pointer;
         }
 
         .services-item-hero img {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-transition: 300ms;
+            -o-transition: 300ms;
             transition: 300ms;
         }
 
@@ -228,16 +295,27 @@
         }
 
         .services-item-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             width: 100%;
         }
 
         .services-item-list-link {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding: 36px;
             font-size: 24px;
             color: #fff;
@@ -247,12 +325,21 @@
 
         .services-item-hero-soon {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding: 36px 15px;
             cursor: not-allowed;
-            user-select: none;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
         }
 
         .services-item-soon span {
@@ -263,6 +350,8 @@
 
         .services-item-soon {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             position: relative;
             overflow: hidden;
@@ -318,7 +407,9 @@
 
             .services-item-hero {
                 padding: 20px;
-                justify-content: space-between;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
             }
 
             .services-item-hero span {
@@ -339,7 +430,9 @@
 
             .services-item-hero-soon {
                 padding: 20px;
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
             }
 
             .services-item-soon span {
@@ -352,6 +445,8 @@
             }
 
             .calculator__mobile {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
             }
         }
