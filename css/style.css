@@ -1076,7 +1076,6 @@ position: relative !important;
   .header__right-content-btn,
   .works-btn{
     margin: 0 !important;
-    width: 100% !important;
     text-align: center;
   }
   .works-btn{
