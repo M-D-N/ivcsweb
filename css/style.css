@@ -1086,7 +1086,9 @@ position: relative !important;
     width: 50% !important;
   }
   .quiz__right-box{
-    align-items: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
   .works-btn{
     margin: 50px 0 !important;
@@ -1282,7 +1284,8 @@ position: relative !important;
   }
   .search-box{
     padding: 50px 20px !important;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .header__search-title{
     font-size: 28px !important ;
